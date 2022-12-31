@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingIncomePageView: PageView {
     
+    @State var shouldAnimate = false
     @EnvironmentObject var onboardingViewModel: OnboardingViewModel
     var pageTag: PageTag = .incomePage
     
@@ -16,10 +17,16 @@ struct OnboardingIncomePageView: PageView {
         VStack {
             Spacer()
             logoView
+                .scaleEffect(shouldAnimate ? 1 : 0.5)
+                .opacity(shouldAnimate ? 1 : 0.8)
+                .animation(.spring(), value: shouldAnimate)
             Spacer()
             subheadlineView
                 .padding()
         }
+        .onReceive(onboardingViewModel.$selectedPage, perform: { newValue in
+            shouldAnimate = pageTag == newValue
+        })
     }
     
     private var logoView: some View {
@@ -43,9 +50,12 @@ struct OnboardingIncomePageView: PageView {
                 .fontWeight(.medium)
                 .padding(.vertical)
                 .multilineTextAlignment(.center)
+                .scaleEffect(shouldAnimate ? 1 : 0.5)
+                .opacity(shouldAnimate ? 1 : 0.8)
+                .animation(.spring(), value: shouldAnimate)
             Button {
                 withAnimation {
-                    onboardingViewModel.selectedPage = .splitterPage
+                    onboardingViewModel.selectedPage = .initialPage
                 }
             } label: {
                 HStack {

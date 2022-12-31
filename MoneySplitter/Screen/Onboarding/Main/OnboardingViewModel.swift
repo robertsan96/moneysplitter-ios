@@ -10,14 +10,18 @@ import Combine
 
 class OnboardingViewModel: ObservableObject {
     
-    @Published var selectedPage: PageTag = .initialPage
+    @Published var selectedPage: PageTag = .noPage
     
     init(selectedPage: PageTag = .initialPage) {
         self.selectedPage = selectedPage
+        objectWillChange.send()
+        objectWillChange.send()
     }
 }
 
 enum PageTag: Int {
+    case noPage
+    
     case initialPage
     case splitterPage
     case expensePage
