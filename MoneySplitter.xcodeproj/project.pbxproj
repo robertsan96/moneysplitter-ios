@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532454F829601BB3003FAB0F /* MoneySplitterApp.swift */; };
+		532454FB29601BB3003FAB0F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532454FA29601BB3003FAB0F /* Persistence.swift */; };
+		532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */; };
+		5324550029601BB3003FAB0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532454FF29601BB3003FAB0F /* ContentView.swift */; };
+		5324550229601BB4003FAB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5324550129601BB4003FAB0F /* Assets.xcassets */; };
+		5324550629601BB4003FAB0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5324550529601BB4003FAB0F /* Preview Assets.xcassets */; };
+		5324551029601BB4003FAB0F /* MoneySplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324550F29601BB4003FAB0F /* MoneySplitterTests.swift */; };
+		5324551A29601BB4003FAB0F /* MoneySplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */; };
+		5324551C29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5324550C29601BB4003FAB0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 532454ED29601BB3003FAB0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 532454F429601BB3003FAB0F;
+			remoteInfo = MoneySplitter;
+		};
+		5324551629601BB4003FAB0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 532454ED29601BB3003FAB0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 532454F429601BB3003FAB0F;
+			remoteInfo = MoneySplitter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		532454F529601BB3003FAB0F /* MoneySplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		532454F829601BB3003FAB0F /* MoneySplitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterApp.swift; sourceTree = "<group>"; };
+		532454FA29601BB3003FAB0F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		532454FD29601BB3003FAB0F /* MoneySplitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneySplitter.xcdatamodel; sourceTree = "<group>"; };
+		532454FF29601BB3003FAB0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5324550129601BB4003FAB0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5324550329601BB4003FAB0F /* MoneySplitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneySplitter.entitlements; sourceTree = "<group>"; };
+		5324550529601BB4003FAB0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5324550B29601BB4003FAB0F /* MoneySplitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneySplitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5324550F29601BB4003FAB0F /* MoneySplitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterTests.swift; sourceTree = "<group>"; };
+		5324551529601BB4003FAB0F /* MoneySplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneySplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITests.swift; sourceTree = "<group>"; };
+		5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		532454F229601BB3003FAB0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324550829601BB4003FAB0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324551229601BB4003FAB0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		532454EC29601BB3003FAB0F = {
+			isa = PBXGroup;
+			children = (
+				532454F729601BB3003FAB0F /* MoneySplitter */,
+				5324550E29601BB4003FAB0F /* MoneySplitterTests */,
+				5324551829601BB4003FAB0F /* MoneySplitterUITests */,
+				532454F629601BB3003FAB0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		532454F629601BB3003FAB0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				532454F529601BB3003FAB0F /* MoneySplitter.app */,
+				5324550B29601BB4003FAB0F /* MoneySplitterTests.xctest */,
+				5324551529601BB4003FAB0F /* MoneySplitterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		532454F729601BB3003FAB0F /* MoneySplitter */ = {
+			isa = PBXGroup;
+			children = (
+				532454F829601BB3003FAB0F /* MoneySplitterApp.swift */,
+				532454FA29601BB3003FAB0F /* Persistence.swift */,
+				532454FF29601BB3003FAB0F /* ContentView.swift */,
+				5324550129601BB4003FAB0F /* Assets.xcassets */,
+				5324550329601BB4003FAB0F /* MoneySplitter.entitlements */,
+				532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */,
+				5324550429601BB4003FAB0F /* Preview Content */,
+			);
+			path = MoneySplitter;
+			sourceTree = "<group>";
+		};
+		5324550429601BB4003FAB0F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5324550529601BB4003FAB0F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5324550E29601BB4003FAB0F /* MoneySplitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				5324550F29601BB4003FAB0F /* MoneySplitterTests.swift */,
+			);
+			path = MoneySplitterTests;
+			sourceTree = "<group>";
+		};
+		5324551829601BB4003FAB0F /* MoneySplitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */,
+				5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */,
+			);
+			path = MoneySplitterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		532454F429601BB3003FAB0F /* MoneySplitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5324551F29601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitter" */;
+			buildPhases = (
+				532454F129601BB3003FAB0F /* Sources */,
+				532454F229601BB3003FAB0F /* Frameworks */,
+				532454F329601BB3003FAB0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneySplitter;
+			productName = MoneySplitter;
+			productReference = 532454F529601BB3003FAB0F /* MoneySplitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5324550A29601BB4003FAB0F /* MoneySplitterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5324552229601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitterTests" */;
+			buildPhases = (
+				5324550729601BB4003FAB0F /* Sources */,
+				5324550829601BB4003FAB0F /* Frameworks */,
+				5324550929601BB4003FAB0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5324550D29601BB4003FAB0F /* PBXTargetDependency */,
+			);
+			name = MoneySplitterTests;
+			productName = MoneySplitterTests;
+			productReference = 5324550B29601BB4003FAB0F /* MoneySplitterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5324551429601BB4003FAB0F /* MoneySplitterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5324552529601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitterUITests" */;
+			buildPhases = (
+				5324551129601BB4003FAB0F /* Sources */,
+				5324551229601BB4003FAB0F /* Frameworks */,
+				5324551329601BB4003FAB0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5324551729601BB4003FAB0F /* PBXTargetDependency */,
+			);
+			name = MoneySplitterUITests;
+			productName = MoneySplitterUITests;
+			productReference = 5324551529601BB4003FAB0F /* MoneySplitterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		532454ED29601BB3003FAB0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					532454F429601BB3003FAB0F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					5324550A29601BB4003FAB0F = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 532454F429601BB3003FAB0F;
+					};
+					5324551429601BB4003FAB0F = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 532454F429601BB3003FAB0F;
+					};
+				};
+			};
+			buildConfigurationList = 532454F029601BB3003FAB0F /* Build configuration list for PBXProject "MoneySplitter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 532454EC29601BB3003FAB0F;
+			productRefGroup = 532454F629601BB3003FAB0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				532454F429601BB3003FAB0F /* MoneySplitter */,
+				5324550A29601BB4003FAB0F /* MoneySplitterTests */,
+				5324551429601BB4003FAB0F /* MoneySplitterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		532454F329601BB3003FAB0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5324550629601BB4003FAB0F /* Preview Assets.xcassets in Resources */,
+				5324550229601BB4003FAB0F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324550929601BB4003FAB0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324551329601BB4003FAB0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		532454F129601BB3003FAB0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */,
+				532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */,
+				5324550029601BB3003FAB0F /* ContentView.swift in Sources */,
+				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324550729601BB4003FAB0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5324551029601BB4003FAB0F /* MoneySplitterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5324551129601BB4003FAB0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5324551C29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift in Sources */,
+				5324551A29601BB4003FAB0F /* MoneySplitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5324550D29601BB4003FAB0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 532454F429601BB3003FAB0F /* MoneySplitter */;
+			targetProxy = 5324550C29601BB4003FAB0F /* PBXContainerItemProxy */;
+		};
+		5324551729601BB4003FAB0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 532454F429601BB3003FAB0F /* MoneySplitter */;
+			targetProxy = 5324551629601BB4003FAB0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5324551D29601BB4003FAB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5324551E29601BB4003FAB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5324552029601BB4003FAB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneySplitter/MoneySplitter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MoneySplitter/Preview Content\"";
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5324552129601BB4003FAB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneySplitter/MoneySplitter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MoneySplitter/Preview Content\"";
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5324552329601BB4003FAB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneySplitter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneySplitter";
+			};
+			name = Debug;
+		};
+		5324552429601BB4003FAB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneySplitter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneySplitter";
+			};
+			name = Release;
+		};
+		5324552629601BB4003FAB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneySplitter;
+			};
+			name = Debug;
+		};
+		5324552729601BB4003FAB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FZSAPS42SZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertsandru.MoneySplitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneySplitter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		532454F029601BB3003FAB0F /* Build configuration list for PBXProject "MoneySplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5324551D29601BB4003FAB0F /* Debug */,
+				5324551E29601BB4003FAB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5324551F29601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5324552029601BB4003FAB0F /* Debug */,
+				5324552129601BB4003FAB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5324552229601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5324552329601BB4003FAB0F /* Debug */,
+				5324552429601BB4003FAB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5324552529601BB4003FAB0F /* Build configuration list for PBXNativeTarget "MoneySplitterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5324552629601BB4003FAB0F /* Debug */,
+				5324552729601BB4003FAB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				532454FD29601BB3003FAB0F /* MoneySplitter.xcdatamodel */,
+			);
+			currentVersion = 532454FD29601BB3003FAB0F /* MoneySplitter.xcdatamodel */;
+			path = MoneySplitter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 532454ED29601BB3003FAB0F /* Project object */;
+}
