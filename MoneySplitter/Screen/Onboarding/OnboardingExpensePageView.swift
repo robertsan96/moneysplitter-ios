@@ -10,7 +10,6 @@ import SwiftUI
 struct OnboardingExpensePageView: PageView {
     
     @State var shouldAnimate = false
-    @State private var shouldAnimateButtonArrow = false
     @EnvironmentObject var onboardingViewModel: OnboardingViewModel
     
     var pageTag: PageTag = .expensePage
@@ -29,9 +28,6 @@ struct OnboardingExpensePageView: PageView {
         .onReceive(onboardingViewModel.$selectedPage, perform: { newValue in
             shouldAnimate = pageTag == newValue
         })
-        .onAppear {
-            shouldAnimateButtonArrow = true
-        }
     }
     
     private var logoView: some View {
@@ -68,11 +64,6 @@ struct OnboardingExpensePageView: PageView {
                     Text(R.string.localizable.next)
                         .padding(.horizontal)
                     Image(systemName: "arrow.right")
-                        .offset(x: shouldAnimateButtonArrow ? -5 : 0)
-                        .animation(
-                            .easeInOut(duration: 0.5)
-                            .repeatForever(autoreverses: true),
-                            value: shouldAnimateButtonArrow)
                     Spacer()
                 }
             }
