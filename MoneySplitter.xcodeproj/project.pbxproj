@@ -16,6 +16,7 @@
 		5324551029601BB4003FAB0F /* MoneySplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324550F29601BB4003FAB0F /* MoneySplitterTests.swift */; };
 		5324551A29601BB4003FAB0F /* MoneySplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */; };
 		5324551C29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */; };
+		5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245529296028E0003FAB0F /* OnboardingScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5324551529601BB4003FAB0F /* MoneySplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneySplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITests.swift; sourceTree = "<group>"; };
 		5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53245529296028E0003FAB0F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		532454F729601BB3003FAB0F /* MoneySplitter */ = {
 			isa = PBXGroup;
 			children = (
+				53245528296028B1003FAB0F /* Screen */,
 				532454F829601BB3003FAB0F /* MoneySplitterApp.swift */,
 				532454FA29601BB3003FAB0F /* Persistence.swift */,
 				532454FF29601BB3003FAB0F /* ContentView.swift */,
@@ -133,6 +136,22 @@
 				5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */,
 			);
 			path = MoneySplitterUITests;
+			sourceTree = "<group>";
+		};
+		53245528296028B1003FAB0F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5324552B2960290F003FAB0F /* Onboarding */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5324552B2960290F003FAB0F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				53245529296028E0003FAB0F /* OnboardingScreenView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +288,7 @@
 				532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */,
 				5324550029601BB3003FAB0F /* ContentView.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
+				5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
