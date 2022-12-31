@@ -9,35 +9,33 @@ import SwiftUI
 
 struct OnboardingScreenView: View {
     
-    @State private var selectedPage: PageTag = .initialPage
+    @StateObject var onboardingViewModel = OnboardingViewModel()
     
     var body: some View {
-        TabView(selection: $selectedPage) {
-            OnboardingInitialPageView(selectedPage: $selectedPage)
+        TabView(selection: $onboardingViewModel.selectedPage) {
+            OnboardingInitialPageView()
                 .tag(PageTag.initialPage)
-            OnboardingSplitterPageView(selectedPage: $selectedPage)
+            OnboardingSplitterPageView()
                 .tag(PageTag.splitterPage)
-            OnboardingPipesPageView(selectedPage: $selectedPage)
+            OnboardingPipesPageView()
                 .tag(PageTag.pipesPage)
-            OnboardingExpensePageView(selectedPage: $selectedPage)
+            OnboardingExpensePageView()
                 .tag(PageTag.expensePage)
-            OnboardingIncomePageView(selectedPage: $selectedPage)
+            OnboardingIncomePageView()
                 .tag(PageTag.incomePage)
         }
+        .environmentObject(onboardingViewModel)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 
-enum PageTag: Int {
-    case initialPage
-    case splitterPage
-    case expensePage
-    case incomePage
-    case pipesPage
+protocol PageView: View {
+    var pageTag: PageTag { get }
 }
 
 struct OnboardingScreenView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingScreenView()
+            .environmentObject(OnboardingViewModel.mock(selectedPage: .initialPage))
     }
 }

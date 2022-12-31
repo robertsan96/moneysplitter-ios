@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct OnboardingInitialPageView: View {
-    @Binding var selectedPage: PageTag
+struct OnboardingInitialPageView: PageView {
+    
     @State private var shouldAnimateButtonArrow = false
+    @EnvironmentObject var onboardingViewModel: OnboardingViewModel
+    
+    var pageTag: PageTag = .initialPage
     
     var body: some View {
         VStack {
@@ -45,7 +48,7 @@ struct OnboardingInitialPageView: View {
                 .multilineTextAlignment(.center)
             Button {
                 withAnimation {
-                    selectedPage = .splitterPage
+                    onboardingViewModel.selectedPage = .splitterPage
                 }
             } label: {
                 HStack {
@@ -68,6 +71,7 @@ struct OnboardingInitialPageView: View {
 
 struct OnboardingInitialPageView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingInitialPageView(selectedPage: .constant(.initialPage))
+        OnboardingInitialPageView()
+            .environmentObject(OnboardingViewModel.mock(selectedPage: .initialPage))
     }
 }

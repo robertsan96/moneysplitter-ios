@@ -25,6 +25,7 @@
 		5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */; };
 		53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */; };
 		532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455532960476E003FAB0F /* OnboardingPipesPageView.swift */; };
+		5324555A29605021003FAB0F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324555929605021003FAB0F /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExpensePageView.swift; sourceTree = "<group>"; };
 		53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIncomePageView.swift; sourceTree = "<group>"; };
 		532455532960476E003FAB0F /* OnboardingPipesPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPipesPageView.swift; sourceTree = "<group>"; };
+		5324555929605021003FAB0F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +171,7 @@
 		5324552B2960290F003FAB0F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				53245529296028E0003FAB0F /* OnboardingScreenView.swift */,
+				5324555729605015003FAB0F /* Main */,
 				53245547296040E6003FAB0F /* OnboardingInitialPageView.swift */,
 				5324554A29604121003FAB0F /* OnboardingSplitterPageView.swift */,
 				532455532960476E003FAB0F /* OnboardingPipesPageView.swift */,
@@ -200,6 +202,15 @@
 				5324554429603CA6003FAB0F /* BlackButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		5324555729605015003FAB0F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				53245529296028E0003FAB0F /* OnboardingScreenView.swift */,
+				5324555929605021003FAB0F /* OnboardingViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 				5324554529603CA6003FAB0F /* BlackButton.swift in Sources */,
 				532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
+				5324555A29605021003FAB0F /* OnboardingViewModel.swift in Sources */,
 				5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */,
 				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
