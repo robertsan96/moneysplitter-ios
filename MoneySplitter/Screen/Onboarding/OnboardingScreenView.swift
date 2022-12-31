@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct OnboardingScreenView: View {
+    
+    @State private var selectedPage: PageTag = .initialPage
+    
     var body: some View {
-        TabView {
-            OnboardingPageOne()
+        TabView(selection: $selectedPage) {
+            OnboardingInitialPageView(selectedPage: $selectedPage)
+                .tag(PageTag.initialPage)
+            OnboardingSplitterPageView(selectedPage: $selectedPage)
+                .tag(PageTag.splitterPage)
+            OnboardingPipesPageView(selectedPage: $selectedPage)
+                .tag(PageTag.pipesPage)
+            OnboardingExpensePageView(selectedPage: $selectedPage)
+                .tag(PageTag.expensePage)
+            OnboardingIncomePageView(selectedPage: $selectedPage)
+                .tag(PageTag.incomePage)
         }
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 
-struct OnboardingPageOne: View {
-    
-    var body: some View {
-        VStack {
-            Image("Logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        }
-    }
+enum PageTag: Int {
+    case initialPage
+    case splitterPage
+    case expensePage
+    case incomePage
+    case pipesPage
 }
 
 struct OnboardingScreenView_Previews: PreviewProvider {

@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  MoneySplitter
+
+  Created by Robert Sandru on 31.12.2022.
+  
+*/
+"appName" = "MoneySplitter";
+
+"onboarding.initialPage.subheadline" = "It is time to outsmart your budget with MoneySplitter";
+
+"onboarding.splitterPage.title" = "Split your income,\nlike never before.";
+"onboarding.splitterPage.subheadline" = "Our system is able to split your income based on simple rules you can provide.";
+
+"onboarding.expensePage.title" = "Your expenses,\nat a glance.";
+"onboarding.expensePage.subheadline" = "Define bills and let the system manage the rest for you. Our spendings system will teach you how important are microtransactions and how quickly we waste money, we promise!";
+
+"onboarding.incomePage.title" = "Getting paid? \nLet MoneySplitter\ndo the rest.";
+"onboarding.incomePage.subheadline" = "Define bills and let the system manage the rest for you. Our spendings system will teach you how important are microtransactions and how quickly we waste money, we promise!";
+
+"onboarding.pipesPage.title" = "It's just pipes,\nin the end.";
+"onboarding.pipesPage.subheadline" = "They are the heart of our system. Your money, your rules, our pipelines. Based on the rules of the template you are using, the system is able to organise your money efficiently in order to cover all the destinations you defined.";
+
+"next" = "Next";
+"letsGo" = "Let's go";

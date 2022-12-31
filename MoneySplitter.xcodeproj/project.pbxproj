@@ -17,6 +17,14 @@
 		5324551A29601BB4003FAB0F /* MoneySplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */; };
 		5324551C29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */; };
 		5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245529296028E0003FAB0F /* OnboardingScreenView.swift */; };
+		5324552E29602A36003FAB0F /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5324552D29602A36003FAB0F /* RswiftLibrary */; };
+		5324553829602CB1003FAB0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5324553A29602CB1003FAB0F /* Localizable.strings */; };
+		5324554529603CA6003FAB0F /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554429603CA6003FAB0F /* BlackButton.swift */; };
+		53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245547296040E6003FAB0F /* OnboardingInitialPageView.swift */; };
+		5324554B29604121003FAB0F /* OnboardingSplitterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554A29604121003FAB0F /* OnboardingSplitterPageView.swift */; };
+		5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */; };
+		53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */; };
+		532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455532960476E003FAB0F /* OnboardingPipesPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITests.swift; sourceTree = "<group>"; };
 		5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53245529296028E0003FAB0F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		5324553929602CB1003FAB0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5324554129602DCB003FAB0F /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5324554429603CA6003FAB0F /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
+		53245547296040E6003FAB0F /* OnboardingInitialPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInitialPageView.swift; sourceTree = "<group>"; };
+		5324554A29604121003FAB0F /* OnboardingSplitterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSplitterPageView.swift; sourceTree = "<group>"; };
+		5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExpensePageView.swift; sourceTree = "<group>"; };
+		53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIncomePageView.swift; sourceTree = "<group>"; };
+		532455532960476E003FAB0F /* OnboardingPipesPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPipesPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5324552E29602A36003FAB0F /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +118,8 @@
 		532454F729601BB3003FAB0F /* MoneySplitter */ = {
 			isa = PBXGroup;
 			children = (
+				5324554229603C93003FAB0F /* Components */,
+				5324553229602C5C003FAB0F /* Constants */,
 				53245528296028B1003FAB0F /* Screen */,
 				532454F829601BB3003FAB0F /* MoneySplitterApp.swift */,
 				532454FA29601BB3003FAB0F /* Persistence.swift */,
@@ -109,6 +128,7 @@
 				5324550329601BB4003FAB0F /* MoneySplitter.entitlements */,
 				532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */,
 				5324550429601BB4003FAB0F /* Preview Content */,
+				5324553A29602CB1003FAB0F /* Localizable.strings */,
 			);
 			path = MoneySplitter;
 			sourceTree = "<group>";
@@ -150,8 +170,36 @@
 			isa = PBXGroup;
 			children = (
 				53245529296028E0003FAB0F /* OnboardingScreenView.swift */,
+				53245547296040E6003FAB0F /* OnboardingInitialPageView.swift */,
+				5324554A29604121003FAB0F /* OnboardingSplitterPageView.swift */,
+				532455532960476E003FAB0F /* OnboardingPipesPageView.swift */,
+				5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */,
+				53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5324553229602C5C003FAB0F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5324554229603C93003FAB0F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5324554329603C99003FAB0F /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5324554329603C99003FAB0F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5324554429603CA6003FAB0F /* BlackButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +216,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				5324553029602AF2003FAB0F /* PBXTargetDependency */,
 			);
 			name = MoneySplitter;
+			packageProductDependencies = (
+				5324552D29602A36003FAB0F /* RswiftLibrary */,
+			);
 			productName = MoneySplitter;
 			productReference = 532454F529601BB3003FAB0F /* MoneySplitter.app */;
 			productType = "com.apple.product-type.application";
@@ -240,8 +292,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ro,
 			);
 			mainGroup = 532454EC29601BB3003FAB0F;
+			packageReferences = (
+				5324552C29602A36003FAB0F /* XCRemoteSwiftPackageReference "R" */,
+			);
 			productRefGroup = 532454F629601BB3003FAB0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5324550629601BB4003FAB0F /* Preview Assets.xcassets in Resources */,
+				5324553829602CB1003FAB0F /* Localizable.strings in Resources */,
 				5324550229601BB4003FAB0F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,10 +342,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */,
+				5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */,
 				532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */,
+				53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */,
+				5324554B29604121003FAB0F /* OnboardingSplitterPageView.swift in Sources */,
 				5324550029601BB3003FAB0F /* ContentView.swift in Sources */,
+				5324554529603CA6003FAB0F /* BlackButton.swift in Sources */,
+				532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
 				5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */,
+				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,13 +385,30 @@
 			target = 532454F429601BB3003FAB0F /* MoneySplitter */;
 			targetProxy = 5324551629601BB4003FAB0F /* PBXContainerItemProxy */;
 		};
+		5324553029602AF2003FAB0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5324552F29602AF2003FAB0F /* RswiftGenerateInternalResources */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5324553A29602CB1003FAB0F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5324553929602CB1003FAB0F /* en */,
+				5324554129602DCB003FAB0F /* ro */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5324551D29601BB4003FAB0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -387,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -640,6 +721,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5324552C29602A36003FAB0F /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5324552D29602A36003FAB0F /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5324552C29602A36003FAB0F /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		5324552F29602AF2003FAB0F /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */ = {
