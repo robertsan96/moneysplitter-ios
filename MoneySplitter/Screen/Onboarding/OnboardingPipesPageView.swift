@@ -67,7 +67,7 @@ struct OnboardingPipesPageView: PageView {
                     Spacer()
                 }
             }
-            .buttonStyle(BlackButton())
+            .buttonStyle(PrimaryButton())
         }
     }
 }

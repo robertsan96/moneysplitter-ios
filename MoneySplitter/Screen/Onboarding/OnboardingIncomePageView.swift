@@ -65,7 +65,7 @@ struct OnboardingIncomePageView: PageView {
                     Spacer()
                 }
             }
-            .buttonStyle(BlackButton())
+            .buttonStyle(PrimaryButton(color: .accentColor))
         }
     }
 }

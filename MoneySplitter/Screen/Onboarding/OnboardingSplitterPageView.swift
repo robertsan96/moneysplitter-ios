@@ -67,7 +67,7 @@ struct OnboardingSplitterPageView: PageView {
                     Spacer()
                 }
             }
-            .buttonStyle(BlackButton())
+            .buttonStyle(PrimaryButton())
         }
     }
 }

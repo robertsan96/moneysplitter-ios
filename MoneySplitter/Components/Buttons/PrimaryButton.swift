@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct PrimaryButton: ButtonStyle {
+    
+    var color: Color = .black
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .background(configuration.isPressed ? .black.opacity(0.8) : .black)
+            .background(configuration.isPressed ? color.opacity(0.8) : color)
             .foregroundColor(.white)
             .fontWeight(.bold)
             .clipShape(Capsule())

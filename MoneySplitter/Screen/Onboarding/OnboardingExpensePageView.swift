@@ -67,7 +67,7 @@ struct OnboardingExpensePageView: PageView {
                     Spacer()
                 }
             }
-            .buttonStyle(BlackButton())
+            .buttonStyle(PrimaryButton())
         }
     }
 }
