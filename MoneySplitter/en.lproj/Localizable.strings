@@ -23,3 +23,10 @@
 
 "next" = "Next";
 "letsGo" = "Let's go";
+
+// MARK: Routes
+
+"route.general.homeTitle" = "Home";
+"route.general.splitterTitle" = "Splitter";
+"route.general.incomeTitle" = "Income";
+"route.general.expenseTitle" = "Expense";
