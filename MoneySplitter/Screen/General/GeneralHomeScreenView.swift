@@ -8,9 +8,38 @@
 import SwiftUI
 
 struct GeneralHomeScreenView: View {
+    
+    @State var isAnimating: Bool = false
+    
     var body: some View {
         NavigationView {
-            Text("Statistics")
+            VStack(spacing: 20) {
+                Image(systemName: "checkmark.seal.fill")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .rotationEffect(isAnimating ? .degrees(360) : .zero)
+                    .foregroundColor(.accentColor)
+                Text("Welcome to\n**MoneySplitter**")
+                    .font(.title2)
+                    .multilineTextAlignment(.center)
+            }
+            .scaleEffect(isAnimating ? 1 : 0)
+            .animation(.spring(), value: isAnimating)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack {
+                        Image(uiImage: R.image.logo()!)
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                        Text("MoneySplitter")
+                            .fontWeight(.bold)
+                    }
+                    .scaleEffect(isAnimating ? 1 : 0)
+                }
+            }
+            .onAppear {
+                isAnimating = true
+            }
         }
     }
 }
