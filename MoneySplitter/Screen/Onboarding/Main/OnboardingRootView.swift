@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct OnboardingScreenView: View {
+struct OnboardingRootView: View {
     
-    @StateObject var onboardingViewModel = OnboardingViewModel()
+    @StateObject var onboardingViewModel = OnboardingRootViewModel()
     
     var body: some View {
         TabView(selection: $onboardingViewModel.selectedPage) {
@@ -35,7 +35,7 @@ protocol PageView: View {
 
 struct OnboardingScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreenView()
-            .environmentObject(OnboardingViewModel.mock(selectedPage: .initialPage))
+        OnboardingRootView()
+            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .initialPage))
     }
 }

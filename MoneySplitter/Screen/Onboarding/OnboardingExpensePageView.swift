@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingExpensePageView: PageView {
     
     @State var shouldAnimate = false
-    @EnvironmentObject var onboardingViewModel: OnboardingViewModel
+    @EnvironmentObject var onboardingViewModel: OnboardingRootViewModel
     
     var pageTag: PageTag = .expensePage
     
@@ -75,6 +75,6 @@ struct OnboardingExpensePageView: PageView {
 struct OnboardingExpensePageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingExpensePageView()
-            .environmentObject(OnboardingViewModel.mock(selectedPage: .expensePage))
+            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .expensePage))
     }
 }

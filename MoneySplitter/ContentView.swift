@@ -10,13 +10,32 @@ import CoreData
 
 struct ContentView: View {
     
+    @EnvironmentObject var navigationCoordinator: RootNavigationCoordinator
+    
     var body: some View {
-        OnboardingScreenView()
+        switch navigationCoordinator.activeRoute {
+        case
+                .onboardingInitial,
+                .onboardingSplitter,
+                .onboardingPipe,
+                .onboardingExpense,
+                .onboardingIncome:
+            OnboardingRootView()
+        case
+                .generalHome,
+                .generalSplitter,
+                .generalExpense,
+                .generalIncome:
+            GeneralRootView()
+                .environmentObject(GeneralNavigationCoordinator())
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+            .environmentObject(RootNavigationCoordinator())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

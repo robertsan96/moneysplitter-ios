@@ -10,7 +10,9 @@ import SwiftUI
 struct OnboardingIncomePageView: PageView {
     
     @State var shouldAnimate = false
-    @EnvironmentObject var onboardingViewModel: OnboardingViewModel
+    @EnvironmentObject var onboardingViewModel: OnboardingRootViewModel
+    @EnvironmentObject var navigationCoordinator: RootNavigationCoordinator
+    
     var pageTag: PageTag = .incomePage
     
     var body: some View {
@@ -55,7 +57,7 @@ struct OnboardingIncomePageView: PageView {
                 .animation(.spring(), value: shouldAnimate)
             Button {
                 withAnimation {
-                    onboardingViewModel.selectedPage = .initialPage
+                    navigationCoordinator.didFinishOnboarding()
                 }
             } label: {
                 HStack {
@@ -73,6 +75,7 @@ struct OnboardingIncomePageView: PageView {
 struct OnboardingIncomePageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingIncomePageView()
-            .environmentObject(OnboardingViewModel.mock(selectedPage: .incomePage))
+            .environmentObject(RootNavigationCoordinator(activeRoute: .onboardingIncome))
+            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .incomePage))
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingSplitterPageView: PageView {
     
     @State var shouldAnimate = false
-    @EnvironmentObject var onboardingViewModel: OnboardingViewModel
+    @EnvironmentObject var onboardingViewModel: OnboardingRootViewModel
     
     var pageTag: PageTag = .splitterPage
     
@@ -75,6 +75,6 @@ struct OnboardingSplitterPageView: PageView {
 struct OnboardingSplitterPageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingSplitterPageView()
-            .environmentObject(OnboardingViewModel.mock(selectedPage: .splitterPage))
+            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .splitterPage))
     }
 }

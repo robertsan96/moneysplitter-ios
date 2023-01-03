@@ -7,20 +7,30 @@
 
 import Foundation
 
-protocol Routeable { }
-
-enum OnboardingRoute: Routeable {
+enum Route {
     
-    case initial
-    case splitter
-    case pipe
-    case expense
-    case income
+    case onboardingInitial
+    case onboardingSplitter
+    case onboardingPipe
+    case onboardingExpense
+    case onboardingIncome
+    
+    case generalHome
+    case generalExpense
+    case generalIncome
+    case generalSplitter
 }
 
-enum GeneralRoute: Routeable {
+extension Route {
     
-    case home
-    case expense
-    case income
+    var localizedTitle: String {
+        switch self {
+        case .generalHome: return "Home"
+        case .generalIncome: return "Income"
+        case .generalExpense: return "Expense"
+        case .generalSplitter: return "Splitter"
+            
+        default: return ""
+        }
+    }
 }

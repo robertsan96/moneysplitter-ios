@@ -11,7 +11,7 @@ struct OnboardingInitialPageView: PageView {
     
     @State var shouldAnimate = false
     
-    @EnvironmentObject var onboardingViewModel: OnboardingViewModel
+    @EnvironmentObject var onboardingViewModel: OnboardingRootViewModel
     
     var pageTag: PageTag = .initialPage
     
@@ -74,6 +74,6 @@ struct OnboardingInitialPageView: PageView {
 struct OnboardingInitialPageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingInitialPageView()
-            .environmentObject(OnboardingViewModel.mock(selectedPage: .initialPage))
+            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .initialPage))
     }
 }

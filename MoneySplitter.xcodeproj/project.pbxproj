@@ -16,7 +16,7 @@
 		5324551029601BB4003FAB0F /* MoneySplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324550F29601BB4003FAB0F /* MoneySplitterTests.swift */; };
 		5324551A29601BB4003FAB0F /* MoneySplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */; };
 		5324551C29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */; };
-		5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245529296028E0003FAB0F /* OnboardingScreenView.swift */; };
+		5324552A296028E0003FAB0F /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245529296028E0003FAB0F /* OnboardingRootView.swift */; };
 		5324552E29602A36003FAB0F /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5324552D29602A36003FAB0F /* RswiftLibrary */; };
 		5324553829602CB1003FAB0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5324553A29602CB1003FAB0F /* Localizable.strings */; };
 		5324554529603CA6003FAB0F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554429603CA6003FAB0F /* PrimaryButton.swift */; };
@@ -25,10 +25,16 @@
 		5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */; };
 		53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */; };
 		532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455532960476E003FAB0F /* OnboardingPipesPageView.swift */; };
-		5324555A29605021003FAB0F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324555929605021003FAB0F /* OnboardingViewModel.swift */; };
+		5324555A29605021003FAB0F /* OnboardingRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324555929605021003FAB0F /* OnboardingRootViewModel.swift */; };
 		532455632963FBE5003FAB0F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455622963FBE5003FAB0F /* Color.swift */; };
-		532455692963FE22003FAB0F /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455682963FE22003FAB0F /* NavigationCoordinator.swift */; };
+		532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455682963FE22003FAB0F /* RootNavigationCoordinator.swift */; };
 		5324556E2963FE6D003FAB0F /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324556D2963FE6D003FAB0F /* Routes.swift */; };
+		5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324557229640235003FAB0F /* GeneralHomeScreenView.swift */; };
+		53245576296402C1003FAB0F /* GeneralRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245575296402C1003FAB0F /* GeneralRootView.swift */; };
+		5324557B296403B6003FAB0F /* GeneralNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324557A296403B6003FAB0F /* GeneralNavigationCoordinator.swift */; };
+		5324557F296404D9003FAB0F /* GeneralExpenseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324557E296404D9003FAB0F /* GeneralExpenseScreenView.swift */; };
+		53245582296404E1003FAB0F /* GeneralIncomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245581296404E1003FAB0F /* GeneralIncomeScreenView.swift */; };
+		5324558429640B1F003FAB0F /* GeneralSplitterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324558329640B1F003FAB0F /* GeneralSplitterScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +68,7 @@
 		5324551529601BB4003FAB0F /* MoneySplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneySplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5324551929601BB4003FAB0F /* MoneySplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITests.swift; sourceTree = "<group>"; };
 		5324551B29601BB4003FAB0F /* MoneySplitterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		53245529296028E0003FAB0F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		53245529296028E0003FAB0F /* OnboardingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootView.swift; sourceTree = "<group>"; };
 		5324553929602CB1003FAB0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5324554129602DCB003FAB0F /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5324554429603CA6003FAB0F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -71,10 +77,16 @@
 		5324554D2960443C003FAB0F /* OnboardingExpensePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExpensePageView.swift; sourceTree = "<group>"; };
 		53245550296045F6003FAB0F /* OnboardingIncomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIncomePageView.swift; sourceTree = "<group>"; };
 		532455532960476E003FAB0F /* OnboardingPipesPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPipesPageView.swift; sourceTree = "<group>"; };
-		5324555929605021003FAB0F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		5324555929605021003FAB0F /* OnboardingRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootViewModel.swift; sourceTree = "<group>"; };
 		532455622963FBE5003FAB0F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		532455682963FE22003FAB0F /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		532455682963FE22003FAB0F /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
 		5324556D2963FE6D003FAB0F /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		5324557229640235003FAB0F /* GeneralHomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralHomeScreenView.swift; sourceTree = "<group>"; };
+		53245575296402C1003FAB0F /* GeneralRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRootView.swift; sourceTree = "<group>"; };
+		5324557A296403B6003FAB0F /* GeneralNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNavigationCoordinator.swift; sourceTree = "<group>"; };
+		5324557E296404D9003FAB0F /* GeneralExpenseScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralExpenseScreenView.swift; sourceTree = "<group>"; };
+		53245581296404E1003FAB0F /* GeneralIncomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralIncomeScreenView.swift; sourceTree = "<group>"; };
+		5324558329640B1F003FAB0F /* GeneralSplitterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSplitterScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +183,7 @@
 		53245528296028B1003FAB0F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				5324557129640222003FAB0F /* General */,
 				5324552B2960290F003FAB0F /* Onboarding */,
 			);
 			path = Screen;
@@ -215,8 +228,8 @@
 		5324555729605015003FAB0F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				53245529296028E0003FAB0F /* OnboardingScreenView.swift */,
-				5324555929605021003FAB0F /* OnboardingViewModel.swift */,
+				53245529296028E0003FAB0F /* OnboardingRootView.swift */,
+				5324555929605021003FAB0F /* OnboardingRootViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -240,10 +253,23 @@
 		5324556A2963FE63003FAB0F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				532455682963FE22003FAB0F /* NavigationCoordinator.swift */,
+				532455682963FE22003FAB0F /* RootNavigationCoordinator.swift */,
+				5324557A296403B6003FAB0F /* GeneralNavigationCoordinator.swift */,
 				5324556D2963FE6D003FAB0F /* Routes.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		5324557129640222003FAB0F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				53245575296402C1003FAB0F /* GeneralRootView.swift */,
+				5324557229640235003FAB0F /* GeneralHomeScreenView.swift */,
+				5324557E296404D9003FAB0F /* GeneralExpenseScreenView.swift */,
+				53245581296404E1003FAB0F /* GeneralIncomeScreenView.swift */,
+				5324558329640B1F003FAB0F /* GeneralSplitterScreenView.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,19 +412,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */,
+				5324557B296403B6003FAB0F /* GeneralNavigationCoordinator.swift in Sources */,
 				5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */,
 				532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */,
 				5324556E2963FE6D003FAB0F /* Routes.swift in Sources */,
+				5324558429640B1F003FAB0F /* GeneralSplitterScreenView.swift in Sources */,
 				53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */,
 				532455632963FBE5003FAB0F /* Color.swift in Sources */,
 				5324554B29604121003FAB0F /* OnboardingSplitterPageView.swift in Sources */,
-				532455692963FE22003FAB0F /* NavigationCoordinator.swift in Sources */,
+				53245582296404E1003FAB0F /* GeneralIncomeScreenView.swift in Sources */,
+				53245576296402C1003FAB0F /* GeneralRootView.swift in Sources */,
+				532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */,
+				5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */,
 				5324550029601BB3003FAB0F /* ContentView.swift in Sources */,
 				5324554529603CA6003FAB0F /* PrimaryButton.swift in Sources */,
 				532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */,
+				5324557F296404D9003FAB0F /* GeneralExpenseScreenView.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
-				5324555A29605021003FAB0F /* OnboardingViewModel.swift in Sources */,
-				5324552A296028E0003FAB0F /* OnboardingScreenView.swift in Sources */,
+				5324555A29605021003FAB0F /* OnboardingRootViewModel.swift in Sources */,
+				5324552A296028E0003FAB0F /* OnboardingRootView.swift in Sources */,
 				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

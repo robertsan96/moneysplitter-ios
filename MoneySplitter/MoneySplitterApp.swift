@@ -11,7 +11,7 @@ import SwiftUI
 struct MoneySplitterApp: App {
     let persistenceController = PersistenceController.shared
     
-    @State var navigationCoordinator = NavigationCoordinator()
+    @State var navigationCoordinator = RootNavigationCoordinator()
 
     var body: some Scene {
         WindowGroup {

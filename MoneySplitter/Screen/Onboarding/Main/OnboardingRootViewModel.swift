@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class OnboardingViewModel: ObservableObject {
+class OnboardingRootViewModel: ObservableObject {
     
     @Published var selectedPage: PageTag = .noPage
     
@@ -29,8 +29,8 @@ enum PageTag: Int {
     case pipesPage
 }
 
-extension OnboardingViewModel {
-    static func mock(selectedPage: PageTag) -> OnboardingViewModel {
+extension OnboardingRootViewModel {
+    static func mock(selectedPage: PageTag) -> OnboardingRootViewModel {
         .init(selectedPage: selectedPage)
     }
 }
