@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  MoneySplitter
 //
 //  Created by Robert Sandru on 31.12.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct RootView: View {
     
     @EnvironmentObject var navigationCoordinator: RootNavigationCoordinator
     
@@ -26,7 +26,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
             .environmentObject(RootNavigationCoordinator())
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }

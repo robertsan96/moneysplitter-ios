@@ -15,7 +15,7 @@ struct MoneySplitterApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environmentObject(navigationCoordinator)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

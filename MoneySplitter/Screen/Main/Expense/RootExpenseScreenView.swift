@@ -10,7 +10,7 @@ import SwiftUI
 struct RootExpenseScreenView: View {
     var body: some View {
         NavigationView {
-            Text("da")
+            Text("daq")
         }
     }
 }
@@ -20,7 +20,7 @@ struct RootExpenseScreenView_Previews: PreviewProvider {
         RootExpenseScreenView()
         
         MainRootView()
-            .environmentObject(MainNavigationCoordinator(activeRoute: .home))
+            .environmentObject(MainNavigationCoordinator(activeRoute: .expense))
             .previewDisplayName("Main Navigation Coordinator")
     }
 }
