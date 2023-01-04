@@ -39,3 +39,11 @@
 "route.main.splitterTitle" = "Splitter";
 "route.main.incomeTitle" = "Income";
 "route.main.expenseTitle" = "Expense";
+
+// MARK: Currency
+
+"currency.ron.name" = "Romanian leu";
+"currency.ron.isoCode" = "RON";
+
+"currency.usd.name" = "United States dollar";
+"currency.usd.isoCode" = "USD";

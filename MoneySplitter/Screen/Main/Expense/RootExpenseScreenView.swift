@@ -10,7 +10,7 @@ import SwiftUI
 struct RootExpenseScreenView: View {
     var body: some View {
         NavigationView {
-            Text("daq")
+            
         }
     }
 }

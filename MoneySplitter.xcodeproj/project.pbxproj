@@ -36,6 +36,13 @@
 		5324558F2965572F003FAB0F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324558E2965572F003FAB0F /* Route.swift */; };
 		53245592296557ED003FAB0F /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245591296557ED003FAB0F /* OnboardingNavigationCoordinator.swift */; };
 		53245595296558C4003FAB0F /* BaseNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245594296558C4003FAB0F /* BaseNavigationCoordinator.swift */; };
+		532455A729659A37003FAB0F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455A629659A37003FAB0F /* Expense.swift */; };
+		532455AB29659AF2003FAB0F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455AA29659AF2003FAB0F /* Currency.swift */; };
+		532455AD29659CC3003FAB0F /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455AC29659CC3003FAB0F /* ExpenseCategory.swift */; };
+		532455B029659CF2003FAB0F /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455AF29659CF2003FAB0F /* ExpenseType.swift */; };
+		532455B329659D05003FAB0F /* ExpenseFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455B229659D05003FAB0F /* ExpenseFrequency.swift */; };
+		532455B629659EB5003FAB0F /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455B529659EB5003FAB0F /* Tag.swift */; };
+		532455BA29659EF7003FAB0F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455B929659EF7003FAB0F /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +96,13 @@
 		5324558E2965572F003FAB0F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		53245591296557ED003FAB0F /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
 		53245594296558C4003FAB0F /* BaseNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationCoordinator.swift; sourceTree = "<group>"; };
+		532455A629659A37003FAB0F /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		532455AA29659AF2003FAB0F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		532455AC29659CC3003FAB0F /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
+		532455AF29659CF2003FAB0F /* ExpenseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseType.swift; sourceTree = "<group>"; };
+		532455B229659D05003FAB0F /* ExpenseFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFrequency.swift; sourceTree = "<group>"; };
+		532455B529659EB5003FAB0F /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		532455B929659EF7003FAB0F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,18 +154,18 @@
 		532454F729601BB3003FAB0F /* MoneySplitter */ = {
 			isa = PBXGroup;
 			children = (
-				532455652963FE12003FAB0F /* Coordinators */,
-				5324555D2963FB86003FAB0F /* Extensions */,
-				5324554229603C93003FAB0F /* Components */,
-				5324553229602C5C003FAB0F /* Constants */,
-				53245528296028B1003FAB0F /* Screen */,
+				5324550329601BB4003FAB0F /* MoneySplitter.entitlements */,
 				532454F829601BB3003FAB0F /* MoneySplitterApp.swift */,
 				532454FA29601BB3003FAB0F /* Persistence.swift */,
 				5324550129601BB4003FAB0F /* Assets.xcassets */,
-				5324550329601BB4003FAB0F /* MoneySplitter.entitlements */,
+				5324554229603C93003FAB0F /* Components */,
+				5324555D2963FB86003FAB0F /* Extensions */,
+				532455A829659ACC003FAB0F /* Internal */,
+				5324553A29602CB1003FAB0F /* Localizable.strings */,
+				532455A429659A2E003FAB0F /* Model */,
 				532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */,
 				5324550429601BB4003FAB0F /* Preview Content */,
-				5324553A29602CB1003FAB0F /* Localizable.strings */,
+				53245528296028B1003FAB0F /* Screen */,
 			);
 			path = MoneySplitter;
 			sourceTree = "<group>";
@@ -197,13 +211,6 @@
 				5324559D2965619E003FAB0F /* View */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		5324553229602C5C003FAB0F /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		5324554229603C93003FAB0F /* Components */ = {
@@ -297,6 +304,36 @@
 				5324557129640222003FAB0F /* General */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		532455A429659A2E003FAB0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				532455B729659ECC003FAB0F /* Expense */,
+				532455B929659EF7003FAB0F /* Service.swift */,
+				532455B529659EB5003FAB0F /* Tag.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		532455A829659ACC003FAB0F /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				532455652963FE12003FAB0F /* Coordinators */,
+				532455AA29659AF2003FAB0F /* Currency.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		532455B729659ECC003FAB0F /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				532455A629659A37003FAB0F /* Expense.swift */,
+				532455AC29659CC3003FAB0F /* ExpenseCategory.swift */,
+				532455AF29659CF2003FAB0F /* ExpenseType.swift */,
+				532455B229659D05003FAB0F /* ExpenseFrequency.swift */,
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +486,10 @@
 				53245582296404E1003FAB0F /* GeneralIncomeScreenView.swift in Sources */,
 				53245595296558C4003FAB0F /* BaseNavigationCoordinator.swift in Sources */,
 				53245576296402C1003FAB0F /* MainRootView.swift in Sources */,
+				532455B329659D05003FAB0F /* ExpenseFrequency.swift in Sources */,
+				532455BA29659EF7003FAB0F /* Service.swift in Sources */,
 				532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */,
+				532455AB29659AF2003FAB0F /* Currency.swift in Sources */,
 				5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */,
 				5324558F2965572F003FAB0F /* Route.swift in Sources */,
 				5324550029601BB3003FAB0F /* RootView.swift in Sources */,
@@ -457,8 +497,12 @@
 				532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */,
 				5324557F296404D9003FAB0F /* RootExpenseScreenView.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
+				532455B029659CF2003FAB0F /* ExpenseType.swift in Sources */,
+				532455A729659A37003FAB0F /* Expense.swift in Sources */,
 				53245592296557ED003FAB0F /* OnboardingNavigationCoordinator.swift in Sources */,
+				532455B629659EB5003FAB0F /* Tag.swift in Sources */,
 				5324552A296028E0003FAB0F /* OnboardingRootView.swift in Sources */,
+				532455AD29659CC3003FAB0F /* ExpenseCategory.swift in Sources */,
 				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
