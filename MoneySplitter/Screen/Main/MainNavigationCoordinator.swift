@@ -9,7 +9,7 @@ import Foundation
 
 class MainNavigationCoordinator: BaseNavigationCoordinator<MainRoute> {
     
-    @Published var selectedTab: MainRoute = .home
+    @Published var selectedTab: MainRoute = .expense
     
     var tabs: [MainRoute] = [
         .home,

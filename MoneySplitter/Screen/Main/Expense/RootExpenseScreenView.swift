@@ -7,20 +7,59 @@
 
 import SwiftUI
 
+struct ExpenseCard: View {
+    
+    let expense: Expense
+    
+    var body: some View {
+        VStack {
+            HStack {
+                logoView
+                Text(expense.service.name)
+                Spacer()
+
+            }
+        }
+        .padding()
+        .background(.black.opacity(0.03))
+        .cornerRadius(15)
+    }
+    
+    private var logoView: some View {
+        AsyncImage(url: expense.service.provider.logo) { image in
+            logoViewBackground
+                .overlay {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipShape(Circle())
+                        .padding(8)
+                }
+        } placeholder: {
+            logoViewBackground
+        }
+    }
+    
+    private var logoViewBackground: some View {
+        Circle()
+            .foregroundColor(Color.black.opacity(0.06))
+            .frame(width: 40, height: 40)
+    }
+}
+
 struct RootExpenseScreenView: View {
     
-    var expenses: [Expense] = Constants.Previews.Expense.pack1
+    var expenses: [Expense] = Constants.Previews.Expense.romanianStarterPack
     
     var body: some View {
         NavigationView {
-            LazyVStack {
-                ForEach(expenses) { e in
-                    VStack {
-                        Text(e.type.localizedString)
+            ScrollView {
+                LazyVStack {
+                    ForEach(expenses) { expense in
+                        ExpenseCard(expense: expense)
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
                     }
-                    .frame(width: 300, height: 100)
-                    .background(Color.black.opacity(0.04))
-                    .cornerRadius(15)
                 }
             }
             .toolbar {
@@ -53,7 +92,7 @@ struct RootExpenseScreenView: View {
 
 struct RootExpenseScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        RootExpenseScreenView(expenses: Constants.Previews.Expense.pack1)
+        RootExpenseScreenView()
         
         RootMainView()
             .environmentObject(MainNavigationCoordinator(activeRoute: .expense))

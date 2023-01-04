@@ -15,4 +15,5 @@ struct Expense: Identifiable {
     let value: Double
     let currency: Currency
     let tags: [Tag]
+    let service: Service
 }

@@ -47,6 +47,12 @@
 		532455C22965A087003FAB0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455C12965A087003FAB0F /* Constants.swift */; };
 		532455C42965A09E003FAB0F /* Constants+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532455C32965A09E003FAB0F /* Constants+Previews.swift */; };
 		536045C42965A5A6001988B5 /* NavigationLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045C32965A5A6001988B5 /* NavigationLogoView.swift */; };
+		536045C82965F9B6001988B5 /* ExpenseListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045C72965F9B6001988B5 /* ExpenseListScreenView.swift */; };
+		536045CD2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045CC2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift */; };
+		536045D22965FD14001988B5 /* Previews+Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045D12965FD14001988B5 /* Previews+Tag.swift */; };
+		536045D52965FDA7001988B5 /* Previews+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045D42965FDA7001988B5 /* Previews+Service.swift */; };
+		536045D82965FDF3001988B5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045D72965FDF3001988B5 /* Provider.swift */; };
+		536045DB2965FE43001988B5 /* Previews+Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045DA2965FE43001988B5 /* Previews+Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +117,12 @@
 		532455C12965A087003FAB0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		532455C32965A09E003FAB0F /* Constants+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Previews.swift"; sourceTree = "<group>"; };
 		536045C32965A5A6001988B5 /* NavigationLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogoView.swift; sourceTree = "<group>"; };
+		536045C72965F9B6001988B5 /* ExpenseListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListScreenView.swift; sourceTree = "<group>"; };
+		536045CC2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseNavigationCoordinator.swift; sourceTree = "<group>"; };
+		536045D12965FD14001988B5 /* Previews+Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Previews+Tag.swift"; sourceTree = "<group>"; };
+		536045D42965FDA7001988B5 /* Previews+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Previews+Service.swift"; sourceTree = "<group>"; };
+		536045D72965FDF3001988B5 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		536045DA2965FE43001988B5 /* Previews+Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Previews+Provider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +237,7 @@
 		5324554229603C93003FAB0F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				536045DF29660263001988B5 /* Expense */,
 				536045C02965A58E001988B5 /* Navigation */,
 				5324554329603C99003FAB0F /* Buttons */,
 			);
@@ -277,6 +290,8 @@
 		5324558729655249003FAB0F /* Expense */ = {
 			isa = PBXGroup;
 			children = (
+				536045C92965F9D3001988B5 /* Navigation */,
+				536045C52965F9A7001988B5 /* List */,
 				5324557E296404D9003FAB0F /* RootExpenseScreenView.swift */,
 			);
 			path = Expense;
@@ -322,6 +337,7 @@
 				532455B729659ECC003FAB0F /* Expense */,
 				532455B929659EF7003FAB0F /* Service.swift */,
 				532455B529659EB5003FAB0F /* Tag.swift */,
+				536045D72965FDF3001988B5 /* Provider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,8 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				532455C12965A087003FAB0F /* Constants.swift */,
-				532455C32965A09E003FAB0F /* Constants+Previews.swift */,
-				532455BF2965A07F003FAB0F /* Previews+Expense.swift */,
+				536045DD2965FF39001988B5 /* Previews */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -362,6 +377,41 @@
 				536045C32965A5A6001988B5 /* NavigationLogoView.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		536045C52965F9A7001988B5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				536045C72965F9B6001988B5 /* ExpenseListScreenView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		536045C92965F9D3001988B5 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				536045CC2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		536045DD2965FF39001988B5 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				532455C32965A09E003FAB0F /* Constants+Previews.swift */,
+				532455BF2965A07F003FAB0F /* Previews+Expense.swift */,
+				536045D12965FD14001988B5 /* Previews+Tag.swift */,
+				536045D42965FDA7001988B5 /* Previews+Service.swift */,
+				536045DA2965FE43001988B5 /* Previews+Provider.swift */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		536045DF29660263001988B5 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,14 +566,20 @@
 				53245595296558C4003FAB0F /* BaseNavigationCoordinator.swift in Sources */,
 				53245576296402C1003FAB0F /* RootMainView.swift in Sources */,
 				532455B329659D05003FAB0F /* ExpenseFrequency.swift in Sources */,
+				536045D52965FDA7001988B5 /* Previews+Service.swift in Sources */,
+				536045C82965F9B6001988B5 /* ExpenseListScreenView.swift in Sources */,
 				532455BA29659EF7003FAB0F /* Service.swift in Sources */,
 				532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */,
 				532455AB29659AF2003FAB0F /* Currency.swift in Sources */,
+				536045D22965FD14001988B5 /* Previews+Tag.swift in Sources */,
+				536045D82965FDF3001988B5 /* Provider.swift in Sources */,
 				532455C42965A09E003FAB0F /* Constants+Previews.swift in Sources */,
 				5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */,
 				5324558F2965572F003FAB0F /* Route.swift in Sources */,
 				5324550029601BB3003FAB0F /* RootView.swift in Sources */,
 				5324554529603CA6003FAB0F /* PrimaryButton.swift in Sources */,
+				536045CD2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift in Sources */,
+				536045DB2965FE43001988B5 /* Previews+Provider.swift in Sources */,
 				532455542960476E003FAB0F /* OnboardingPipesPageView.swift in Sources */,
 				532455C02965A07F003FAB0F /* Previews+Expense.swift in Sources */,
 				5324557F296404D9003FAB0F /* RootExpenseScreenView.swift in Sources */,

@@ -11,7 +11,7 @@ import Combine
 class RootNavigationCoordinator: BaseNavigationCoordinator<RootRoute> {
     
     init() {
-        super.init(activeRoute: .onboarding)
+        super.init(activeRoute: .main)
     }
     
     override init(activeRoute: RootRoute) {

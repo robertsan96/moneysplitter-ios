@@ -35,10 +35,14 @@
 "route.onboarding.expense.title" = "Expense";
 "route.onboarding.income.title" = "Income";
 
-"route.main.homeTitle" = "Home";
-"route.main.splitterTitle" = "Splitter";
-"route.main.incomeTitle" = "Income";
-"route.main.expenseTitle" = "Expense";
+"route.main.home.title" = "Home";
+"route.main.splitter.title" = "Splitter";
+"route.main.income.title" = "Income";
+"route.main.expense.title" = "Expense";
+
+"route.expense.list.title" = "List";
+"route.expense.create.title" = "Create Expense";
+"route.expense.read.title" = "Read Expense";
 
 // MARK: Currency
 

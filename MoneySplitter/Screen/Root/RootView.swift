@@ -19,7 +19,7 @@ struct RootView: View {
                 .environmentObject(OnboardingNavigationCoordinator(activeRoute: .initial, parent: navigationCoordinator))
         case .main:
             RootMainView()
-                .environmentObject(MainNavigationCoordinator(activeRoute: .home))
+                .environmentObject(MainNavigationCoordinator(activeRoute: .expense))
         }
     }
 }
