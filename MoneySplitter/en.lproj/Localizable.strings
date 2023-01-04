@@ -26,7 +26,16 @@
 
 // MARK: Routes
 
-"route.general.homeTitle" = "Home";
-"route.general.splitterTitle" = "Splitter";
-"route.general.incomeTitle" = "Income";
-"route.general.expenseTitle" = "Expense";
+"route.root.onboarding.title" = "Onboarding";
+"route.root.main.title" = "Main";
+
+"route.onboarding.initial.title" = "Initial";
+"route.onboarding.splitter.title" = "Splitter";
+"route.onboarding.pipe.title" = "Pipe";
+"route.onboarding.expense.title" = "Expense";
+"route.onboarding.income.title" = "Income";
+
+"route.main.homeTitle" = "Home";
+"route.main.splitterTitle" = "Splitter";
+"route.main.incomeTitle" = "Income";
+"route.main.expenseTitle" = "Expense";

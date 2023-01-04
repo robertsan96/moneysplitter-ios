@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct OnboardingPipesPageView: PageView {
+struct OnboardingPipesPageView: View {
     
     @State var shouldAnimate = false
-    @EnvironmentObject var onboardingViewModel: OnboardingRootViewModel
+    @EnvironmentObject var navigationCoordinator: OnboardingNavigationCoordinator
     
-    var pageTag: PageTag = .pipesPage
+    var route: OnboardingRoute = .pipe
     
     var body: some View {
         VStack {
@@ -25,8 +25,8 @@ struct OnboardingPipesPageView: PageView {
             subheadlineView
                 .padding()
         }
-        .onReceive(onboardingViewModel.$selectedPage, perform: { newValue in
-            shouldAnimate = pageTag == newValue
+        .onReceive(navigationCoordinator.$activeRoute, perform: { newValue in
+            shouldAnimate = route == newValue
         })
     }
     
@@ -56,7 +56,7 @@ struct OnboardingPipesPageView: PageView {
                 .animation(.spring(), value: shouldAnimate)
             Button {
                 withAnimation {
-                    onboardingViewModel.selectedPage = .expensePage
+                    navigationCoordinator.activeRoute = .expense
                 }
             } label: {
                 HStack {
@@ -75,6 +75,6 @@ struct OnboardingPipesPageView: PageView {
 struct OnboardingPipesPageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingPipesPageView()
-            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .pipesPage))
+            .environmentObject(OnboardingNavigationCoordinator(activeRoute: .pipe))
     }
 }

@@ -9,33 +9,28 @@ import SwiftUI
 
 struct OnboardingRootView: View {
     
-    @StateObject var onboardingViewModel = OnboardingRootViewModel()
+    @EnvironmentObject var navigationCoordinator: OnboardingNavigationCoordinator
     
     var body: some View {
-        TabView(selection: $onboardingViewModel.selectedPage) {
+        TabView(selection: $navigationCoordinator.activeRoute) {
             OnboardingInitialPageView()
-                .tag(PageTag.initialPage)
+                .tag(OnboardingRoute.initial)
             OnboardingSplitterPageView()
-                .tag(PageTag.splitterPage)
+                .tag(OnboardingRoute.splitter)
             OnboardingPipesPageView()
-                .tag(PageTag.pipesPage)
+                .tag(OnboardingRoute.pipe)
             OnboardingExpensePageView()
-                .tag(PageTag.expensePage)
+                .tag(OnboardingRoute.expense)
             OnboardingIncomePageView()
-                .tag(PageTag.incomePage)
+                .tag(OnboardingRoute.income)
         }
-        .environmentObject(onboardingViewModel)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
-}
-
-protocol PageView: View {
-    var pageTag: PageTag { get }
 }
 
 struct OnboardingScreenView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingRootView()
-            .environmentObject(OnboardingRootViewModel.mock(selectedPage: .initialPage))
+            .environmentObject(OnboardingNavigationCoordinator(activeRoute: .initial))
     }
 }

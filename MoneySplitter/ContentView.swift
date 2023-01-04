@@ -14,20 +14,12 @@ struct ContentView: View {
     
     var body: some View {
         switch navigationCoordinator.activeRoute {
-        case
-                .onboardingInitial,
-                .onboardingSplitter,
-                .onboardingPipe,
-                .onboardingExpense,
-                .onboardingIncome:
+        case .onboarding:
             OnboardingRootView()
-        case
-                .generalHome,
-                .generalSplitter,
-                .generalExpense,
-                .generalIncome:
-            GeneralRootView()
-                .environmentObject(GeneralNavigationCoordinator())
+                .environmentObject(OnboardingNavigationCoordinator(activeRoute: .initial))
+        case .main:
+            MainRootView()
+                .environmentObject(MainNavigationCoordinator(activeRoute: .home))
         }
     }
 }

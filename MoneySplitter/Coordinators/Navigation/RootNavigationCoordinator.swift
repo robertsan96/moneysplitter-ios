@@ -8,23 +8,30 @@
 import Foundation
 import Combine
 
-class RootNavigationCoordinator: ObservableObject {
-    
-    @Published var activeRoute: Route
+class RootNavigationCoordinator: NavigationCoordinator<RootRoute> {
     
     init() {
-        self.activeRoute = .onboardingInitial
+        super.init(activeRoute: .onboarding)
     }
     
-    init(activeRoute: Route) {
-        self.activeRoute = activeRoute
+    override init(activeRoute: RootRoute) {
+        super.init(activeRoute: activeRoute)
     }
 }
 
-// MARK: Onboarding
-extension RootNavigationCoordinator {
+// MARK: Route Configuration
+enum RootRoute: Route {
     
-    func didFinishOnboarding() {
-        activeRoute = .generalHome
+    case onboarding
+    case main
+}
+
+extension RootRoute {
+    
+    var localizedTitle: String {
+        switch self {
+        case .onboarding: return R.string.localizable.routeRootOnboardingTitle()
+        case .main: return R.string.localizable.routeRootMainTitle()
+        }
     }
 }
