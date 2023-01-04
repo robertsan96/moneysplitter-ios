@@ -52,7 +52,25 @@
 "currency.usd.name" = "United States dollar";
 "currency.usd.isoCode" = "USD";
 
+// MARK: Frequency
+
+"frequency.daily.name" = "Daily";
+"frequency.daily.name.short" = "d";
+"frequency.weekly.name" = "Weekly";
+"frequency.weekly.name.short" = "w";
+"frequency.halfMonthly.name" = "Half Monthly";
+"frequency.halfMonthly.name.short" = "hm";
+"frequency.monthly.name" = "Monthly";
+"frequency.monthly.name.short" = "mo";
+"frequency.halfYearly.name" = "Half Yearly";
+"frequency.halfYearly.name.short" = "hy";
+"frequency.yearly.name" = "Yearly";
+"frequency.yearly.name.short" = "y";
+"frequency.custom.name" = "Custom";
+"frequency.custom.name.short" = "custom";
+
 // MARK: Expense Type
 
 "expense.type.want.name" = "Want";
 "expense.type.need.name" = "Need";
+

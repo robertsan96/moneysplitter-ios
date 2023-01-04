@@ -12,6 +12,13 @@ enum Currency {
     case usd
     case ron
     
+    var name: String {
+        switch self {
+        case .usd: return "USD"
+        case .ron: return "RON"
+        }
+    }
+    
     var localizedName: String {
         switch self {
         case .usd: return R.string.localizable.currencyUsdName()
