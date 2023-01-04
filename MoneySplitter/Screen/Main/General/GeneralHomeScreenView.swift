@@ -27,14 +27,7 @@ struct GeneralHomeScreenView: View {
             .animation(.spring(), value: isAnimating)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
-                        Image(uiImage: R.image.logo()!)
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                        Text("MoneySplitter")
-                            .fontWeight(.bold)
-                    }
-                    .scaleEffect(isAnimating ? 1 : 0)
+                    NavigationLogoView()
                 }
             }
             .onAppear {

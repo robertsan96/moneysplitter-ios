@@ -47,3 +47,8 @@
 
 "currency.usd.name" = "United States dollar";
 "currency.usd.isoCode" = "USD";
+
+// MARK: Expense Type
+
+"expense.type.want.name" = "Want";
+"expense.type.need.name" = "Need";

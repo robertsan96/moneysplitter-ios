@@ -25,4 +25,11 @@ enum Currency {
         case .ron: return 946
         }
     }
+    
+    var flag: String {
+        switch self {
+        case .usd: return "🇺🇸"
+        case .ron: return "🇷🇴"
+        }
+    }
 }

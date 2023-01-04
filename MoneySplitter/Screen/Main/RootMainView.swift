@@ -1,5 +1,5 @@
 //
-//  MainRootView.swift
+//  RootMainView.swift
 //  MoneySplitter
 //
 //  Created by Robert Sandru on 03.01.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainRootView: View {
+struct RootMainView: View {
     
     @EnvironmentObject var navigationCoordinator: MainNavigationCoordinator
     
@@ -41,9 +41,9 @@ struct MainRootView: View {
     }
 }
 
-struct GeneralRootView_Previews: PreviewProvider {
+struct RootMainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainRootView()
+        RootMainView()
             .environmentObject(MainNavigationCoordinator(activeRoute: .home))
     }
 }

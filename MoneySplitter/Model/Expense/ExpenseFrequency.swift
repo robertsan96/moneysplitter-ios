@@ -11,6 +11,7 @@ enum ExpenseFrequency {
     case daily
     case weekly
     case halfMonthly
+    case monthly
     case halfYearly
     case yearly
     case custom
