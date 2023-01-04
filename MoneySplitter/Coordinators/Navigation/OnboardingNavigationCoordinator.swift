@@ -7,10 +7,20 @@
 
 import Foundation
 
-class OnboardingNavigationCoordinator: NavigationCoordinator<OnboardingRoute> {
+class OnboardingNavigationCoordinator: BaseNavigationCoordinator<OnboardingRoute> {
+    
+    override init(activeRoute: OnboardingRoute) {
+        super.init(activeRoute: activeRoute)
+    }
+    
+    override init(activeRoute: OnboardingRoute, parent: NavigationCoordinator?) {
+        super.init(activeRoute: activeRoute, parent: parent)
+    }
     
     func didFinishOnboarding() {
-//        activeRoute = .main
+        if let parent = parent as? RootNavigationCoordinator {
+            parent.activeRoute = .main
+        }
     }
 }
 

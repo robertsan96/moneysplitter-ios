@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainNavigationCoordinator: NavigationCoordinator<MainRoute> {
+class MainNavigationCoordinator: BaseNavigationCoordinator<MainRoute> {
     
     @Published var selectedTab: MainRoute = .home
     

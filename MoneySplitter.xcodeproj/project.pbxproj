@@ -36,7 +36,7 @@
 		5324558429640B1F003FAB0F /* GeneralSplitterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324558329640B1F003FAB0F /* GeneralSplitterScreenView.swift */; };
 		5324558F2965572F003FAB0F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324558E2965572F003FAB0F /* Route.swift */; };
 		53245592296557ED003FAB0F /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245591296557ED003FAB0F /* OnboardingNavigationCoordinator.swift */; };
-		53245595296558C4003FAB0F /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245594296558C4003FAB0F /* NavigationCoordinator.swift */; };
+		53245595296558C4003FAB0F /* BaseNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53245594296558C4003FAB0F /* BaseNavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,7 @@
 		5324558329640B1F003FAB0F /* GeneralSplitterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSplitterScreenView.swift; sourceTree = "<group>"; };
 		5324558E2965572F003FAB0F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		53245591296557ED003FAB0F /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
-		53245594296558C4003FAB0F /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		53245594296558C4003FAB0F /* BaseNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +250,7 @@
 		5324556A2963FE63003FAB0F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				53245594296558C4003FAB0F /* NavigationCoordinator.swift */,
+				53245594296558C4003FAB0F /* BaseNavigationCoordinator.swift */,
 				5324558E2965572F003FAB0F /* Route.swift */,
 				532455682963FE22003FAB0F /* RootNavigationCoordinator.swift */,
 				5324557A296403B6003FAB0F /* MainNavigationCoordinator.swift */,
@@ -427,7 +427,7 @@
 				532455632963FBE5003FAB0F /* Color.swift in Sources */,
 				5324554B29604121003FAB0F /* OnboardingSplitterPageView.swift in Sources */,
 				53245582296404E1003FAB0F /* GeneralIncomeScreenView.swift in Sources */,
-				53245595296558C4003FAB0F /* NavigationCoordinator.swift in Sources */,
+				53245595296558C4003FAB0F /* BaseNavigationCoordinator.swift in Sources */,
 				53245576296402C1003FAB0F /* MainRootView.swift in Sources */,
 				532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */,
 				5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */,

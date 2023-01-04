@@ -16,7 +16,7 @@ struct ContentView: View {
         switch navigationCoordinator.activeRoute {
         case .onboarding:
             OnboardingRootView()
-                .environmentObject(OnboardingNavigationCoordinator(activeRoute: .initial))
+                .environmentObject(OnboardingNavigationCoordinator(activeRoute: .initial, parent: navigationCoordinator))
         case .main:
             MainRootView()
                 .environmentObject(MainNavigationCoordinator(activeRoute: .home))

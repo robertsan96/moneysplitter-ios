@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RootNavigationCoordinator: NavigationCoordinator<RootRoute> {
+class RootNavigationCoordinator: BaseNavigationCoordinator<RootRoute> {
     
     init() {
         super.init(activeRoute: .onboarding)
