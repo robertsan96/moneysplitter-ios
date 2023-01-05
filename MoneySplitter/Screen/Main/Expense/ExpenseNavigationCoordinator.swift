@@ -9,11 +9,26 @@ import Foundation
 
 class ExpenseNavigationCoordinator: BaseNavigationCoordinator<ExpenseRoute> {
     
+    @Published var isFiltering: Bool = false
+    
+    override func registerSubscriptions() {
+        $activeRoute.sink { route in
+            switch route {
+            case .list(let isFiltering): self.isFiltering = isFiltering
+            default: break
+            }
+        }
+        .store(in: &subscriptions)
+    }
+    
+    func didPressFilter() {
+        isFiltering = true
+    }
 }
 
 enum ExpenseRoute: Route {
 
-    case list
+    case list(isFiltering: Bool)
     case create
     case read
 }

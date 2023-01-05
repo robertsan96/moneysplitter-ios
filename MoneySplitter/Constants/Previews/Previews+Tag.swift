@@ -18,5 +18,6 @@ extension Constants.Previews {
         static var work = MoneySplitter.Tag(id: UUID(), name: "work")
         static var gaming = MoneySplitter.Tag(id: UUID(), name: "gaming")
         static var house = MoneySplitter.Tag(id: UUID(), name: "house")
+        static var utilities = MoneySplitter.Tag(id: UUID(), name: "utilities")
     }
 }

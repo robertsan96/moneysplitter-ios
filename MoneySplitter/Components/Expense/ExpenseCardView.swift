@@ -35,7 +35,7 @@ struct ExpenseCardView: View {
         .padding()
         .foregroundColor(.primary)
         .background(Color.color(for: .background, in: colorContext))
-        .cornerRadius(15)
+        .cornerRadius(Constants.CornerRadius.box)
     }
     
     private var logoView: some View {

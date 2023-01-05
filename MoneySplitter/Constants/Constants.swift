@@ -7,4 +7,14 @@
 
 import Foundation
 
-struct Constants { }
+struct Constants {
+    
+    struct Margin {
+        
+    }
+    
+    struct CornerRadius {
+        
+        static let box: CGFloat = 15
+    }
+}

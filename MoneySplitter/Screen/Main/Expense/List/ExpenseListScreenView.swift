@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExpenseListScreenView: View {
     
+    @EnvironmentObject var navigationCoordinator: ExpenseNavigationCoordinator
     @ObservedObject var viewModel: ExpenseListScreenViewModel
     
     var body: some View {
@@ -37,14 +38,14 @@ struct ExpenseListScreenView: View {
     private var navigationButtons: some View {
         HStack {
             Button {
-                
+                navigationCoordinator.didPressFilter()
             } label: {
-                Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+                Label(R.string.localizable.filter(), systemImage: "line.3.horizontal.decrease.circle")
             }
             Button {
                 
             } label: {
-                Label("Add", systemImage: "plus.circle")
+                Label(R.string.localizable.add(), systemImage: "plus.circle")
             }
 
         }
@@ -98,6 +99,7 @@ struct ExpenseListScreenView: View {
 struct ExpenseListScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ExpenseListScreenView(viewModel: .mock)
+            .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: false)))
         
         RootMainView()
             .environmentObject(MainNavigationCoordinator(activeRoute: .expense))

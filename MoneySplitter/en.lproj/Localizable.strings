@@ -23,6 +23,8 @@
 
 "next" = "Next";
 "letsGo" = "Let's go";
+"filter" = "Filter";
+"add" = "Add";
 
 // MARK: Routes
 

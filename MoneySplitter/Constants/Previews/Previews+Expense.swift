@@ -81,7 +81,8 @@ extension Constants.Previews {
                   value: 200,
                   currency: .usd,
                   tags: [
-                    Tags.house
+                    Tags.house,
+                    Tags.utilities
                   ],
                   service: Service.enelSubscription,
                   isFavorite: false)
