@@ -18,6 +18,7 @@ struct MoneySplitterApp: App {
             RootView()
                 .environmentObject(navigationCoordinator)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .preferredColorScheme(.dark)
         }
     }
 }

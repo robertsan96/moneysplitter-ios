@@ -72,5 +72,7 @@
 // MARK: Expense Type
 
 "expense.type.want.name" = "Want";
+"expense.type.want.name.plural" = "Wants";
 "expense.type.need.name" = "Need";
+"expense.type.need.name.plural" = "Needs";
 
