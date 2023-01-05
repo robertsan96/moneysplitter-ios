@@ -26,6 +26,13 @@ enum Currency {
         }
     }
     
+    var symbol: String {
+        switch self {
+        case .usd: return "$"
+        case .ron: return name
+        }
+    }
+    
     var isoCode: Int {
         switch self {
         case .usd: return 840

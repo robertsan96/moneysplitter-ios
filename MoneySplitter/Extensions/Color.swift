@@ -14,6 +14,11 @@ extension Color {
     static var ternaryBackgroundColor = Color(uiColor: R.color.ternaryBackgroundColor()!)
     static var quaternaryBackgroundColor = Color(uiColor: R.color.quaternaryBackgroundColor()!)
     
+    static var primaryTextColor = Color(uiColor: R.color.primaryTextColor()!)
+    static var secondaryTextColor = Color(uiColor: R.color.secondaryTextColor()!)
+    static var ternaryTextColor = Color(uiColor: R.color.ternaryTextColor()!)
+    static var quaternaryTextColor = Color(uiColor: R.color.quaternaryTextColor()!)
+    
     static var lightGreenishBlue = Color(uiColor: R.color.lightGreenishBlue()!)
     static var mintLeaf = Color(uiColor: R.color.mintLeaf()!)
     
@@ -30,7 +35,7 @@ extension Color {
     static func color(for locationContext: ColorLocationContext, in colorContext: ColorContext) -> Color {
         switch locationContext {
         case .background: return backgroundColor(for: colorContext)
-        case .text: return .red
+        case .text: return textColor(for: colorContext)
         }
     }
     
@@ -40,6 +45,15 @@ extension Color {
         case .secondary: return .secondaryBackgroundColor
         case .ternary: return .ternaryBackgroundColor
         case .quaternary: return .quaternaryBackgroundColor
+        }
+    }
+    
+    private static func textColor(for colorContext: ColorContext) -> Color {
+        switch colorContext {
+        case .primary: return .primaryTextColor
+        case .secondary: return .secondaryTextColor
+        case .ternary: return .ternaryTextColor
+        case .quaternary: return .quaternaryTextColor
         }
     }
 }

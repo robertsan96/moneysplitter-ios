@@ -8,13 +8,61 @@
 import SwiftUI
 
 struct ExpenseListScreenView: View {
+    
+    @ObservedObject var viewModel: ExpenseListScreenViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.expenses) { expense in
+                        NavigationLink {
+                            ExpenseDetailScreenView()
+                        } label: {
+                            ExpenseCardView(colorContext: .secondary,
+                                            viewModel: ExpenseCardViewModel(expense: expense))
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                        }
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    NavigationLogoView()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    navigationButtons
+                }
+            }
+            .background(Color.primaryBackgroundColor)
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    private var navigationButtons: some View {
+        HStack {
+            Button {
+                
+            } label: {
+                Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+            }
+            Button {
+                
+            } label: {
+                Label("Add", systemImage: "plus.circle")
+            }
+
+        }
     }
 }
 
 struct ExpenseListScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        ExpenseListScreenView()
+        ExpenseListScreenView(viewModel: .mock)
+        
+        RootMainView()
+            .environmentObject(MainNavigationCoordinator(activeRoute: .expense))
+            .previewDisplayName("Main Navigation Coordinator")
     }
 }

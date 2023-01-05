@@ -16,4 +16,13 @@ struct Expense: Identifiable {
     let currency: Currency
     let tags: [Tag]
     let service: Service
+    let isFavorite: Bool
+    
+    var valueFormatted: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.currencySymbol = currency.symbol
+        
+        return numberFormatter.string(from: value as NSNumber) ?? ""
+    }
 }

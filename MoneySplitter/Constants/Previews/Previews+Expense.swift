@@ -24,7 +24,8 @@ extension Constants.Previews {
                     Tags.entertainment,
                     Tags.movies
                   ],
-                  service: Service.netflixSubscription),
+                  service: Service.netflixSubscription,
+                  isFavorite: true),
             .init(id: UUID(),
                   category: ExpenseCategory.finance,
                   type: .want,
@@ -35,7 +36,8 @@ extension Constants.Previews {
                     Tags.favorites,
                     Tags.finance
                   ],
-                  service: Service.revolutMetal),
+                  service: Service.revolutMetal,
+                  isFavorite: false),
             .init(id: UUID(),
                   category: ExpenseCategory.telecommunication,
                   type: .need,
@@ -46,7 +48,8 @@ extension Constants.Previews {
                     Tags.work,
                     Tags.favorites
                   ],
-                  service: Service.digiTelecommunications),
+                  service: Service.digiTelecommunications,
+                  isFavorite: true),
             .init(id: UUID(),
                   category: ExpenseCategory.cloud,
                   type: .need,
@@ -56,7 +59,8 @@ extension Constants.Previews {
                   tags: [
                     Tags.favorites
                   ],
-                  service: Service.appleICloudSubscription),
+                  service: Service.appleICloudSubscription,
+                  isFavorite: false),
             .init(id: UUID(),
                   category: ExpenseCategory.entertainment,
                   type: .want,
@@ -68,7 +72,8 @@ extension Constants.Previews {
                     Tags.entertainment,
                     Tags.gaming
                   ],
-                  service: Service.playStationExtraSubscription),
+                  service: Service.playStationExtraSubscription,
+                  isFavorite: false),
             .init(id: UUID(),
                   category: ExpenseCategory.house,
                   type: .need,
@@ -78,7 +83,8 @@ extension Constants.Previews {
                   tags: [
                     Tags.house
                   ],
-                  service: Service.enelSubscription)
+                  service: Service.enelSubscription,
+                  isFavorite: false)
         ]
     }
     

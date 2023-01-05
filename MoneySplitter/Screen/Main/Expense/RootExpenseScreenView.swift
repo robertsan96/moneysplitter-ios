@@ -9,68 +9,13 @@ import SwiftUI
 
 struct RootExpenseScreenView: View {
     
-    var expenses: [Expense] = Constants.Previews.Expense.romanianStarterPack
+    @EnvironmentObject var navigationCoordinator: ExpenseNavigationCoordinator
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVStack {
-                    ForEach(expenses) { expense in
-                        NavigationLink {
-                            GeometryReader { proxy in
-                                VStack {
-                                    Text(expense.category.name)
-                                    
-                                    VStack {
-                                        Text("Price:")
-                                        HStack {
-                                            Text("\(expense.value) \(expense.currency.name) /")
-                                            Text(expense.frequency.localizedName)
-                                        }
-                                    }
-                                    
-                                    VStack {
-                                        Text("Cost per year")
-                                        Text("\(expense.value * 12)")
-                                    }
-                                }
-                            }
-                                .background(Color.primaryBackgroundColor)
-                        } label: {
-                            ExpenseCardView(colorContext: .secondary,
-                                            viewModel: ExpenseCardViewModel(expense: expense))
-                                .padding(.horizontal)
-                                .padding(.vertical, 5)
-                        }
-                    }
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    NavigationLogoView()
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    navigationButtons
-                }
-            }
-            .background(Color.primaryBackgroundColor)
-            .navigationBarTitleDisplayMode(.inline)
-        }
-    }
-    
-    private var navigationButtons: some View {
-        HStack {
-            Button {
-                
-            } label: {
-                Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
-            }
-            Button {
-                
-            } label: {
-                Label("Add", systemImage: "plus.circle")
-            }
-
+        switch navigationCoordinator.activeRoute {
+        case .list: ExpenseListScreenView(viewModel: .init(expenses: Constants.Previews.Expense.romanianStarterPack))
+        case .read: Text("no read support yet")
+        case .create: Text("no create support yet")
         }
     }
 }

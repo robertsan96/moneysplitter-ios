@@ -56,6 +56,8 @@
 		536045E22966330F001988B5 /* ExpenseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045E12966330F001988B5 /* ExpenseCardView.swift */; };
 		536045E529663326001988B5 /* ExpenseCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045E429663326001988B5 /* ExpenseCardViewModel.swift */; };
 		536045E829663579001988B5 /* ColorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045E729663579001988B5 /* ColorContext.swift */; };
+		536045EF29671FEA001988B5 /* ExpenseDetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */; };
+		536045F229672045001988B5 /* ExpenseListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		536045E12966330F001988B5 /* ExpenseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardView.swift; sourceTree = "<group>"; };
 		536045E429663326001988B5 /* ExpenseCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardViewModel.swift; sourceTree = "<group>"; };
 		536045E729663579001988B5 /* ColorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContext.swift; sourceTree = "<group>"; };
+		536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailScreenView.swift; sourceTree = "<group>"; };
+		536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,9 +300,10 @@
 		5324558729655249003FAB0F /* Expense */ = {
 			isa = PBXGroup;
 			children = (
-				536045C92965F9D3001988B5 /* Navigation */,
-				536045C52965F9A7001988B5 /* List */,
 				5324557E296404D9003FAB0F /* RootExpenseScreenView.swift */,
+				536045CC2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift */,
+				536045ED29671FDD001988B5 /* Detail */,
+				536045C52965F9A7001988B5 /* List */,
 			);
 			path = Expense;
 			sourceTree = "<group>";
@@ -390,16 +395,9 @@
 			isa = PBXGroup;
 			children = (
 				536045C72965F9B6001988B5 /* ExpenseListScreenView.swift */,
+				536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */,
 			);
 			path = List;
-			sourceTree = "<group>";
-		};
-		536045C92965F9D3001988B5 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				536045CC2965F9EA001988B5 /* ExpenseNavigationCoordinator.swift */,
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		536045DD2965FF39001988B5 /* Previews */ = {
@@ -421,6 +419,14 @@
 				536045E429663326001988B5 /* ExpenseCardViewModel.swift */,
 			);
 			path = Expense;
+			sourceTree = "<group>";
+		};
+		536045ED29671FDD001988B5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +585,7 @@
 				536045C82965F9B6001988B5 /* ExpenseListScreenView.swift in Sources */,
 				532455BA29659EF7003FAB0F /* Service.swift in Sources */,
 				532455692963FE22003FAB0F /* RootNavigationCoordinator.swift in Sources */,
+				536045EF29671FEA001988B5 /* ExpenseDetailScreenView.swift in Sources */,
 				532455AB29659AF2003FAB0F /* Currency.swift in Sources */,
 				536045D22965FD14001988B5 /* Previews+Tag.swift in Sources */,
 				536045D82965FDF3001988B5 /* Provider.swift in Sources */,
@@ -603,6 +610,7 @@
 				532455AD29659CC3003FAB0F /* ExpenseCategory.swift in Sources */,
 				536045E22966330F001988B5 /* ExpenseCardView.swift in Sources */,
 				536045C42965A5A6001988B5 /* NavigationLogoView.swift in Sources */,
+				536045F229672045001988B5 /* ExpenseListScreenViewModel.swift in Sources */,
 				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
