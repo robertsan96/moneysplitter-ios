@@ -25,6 +25,7 @@
 "letsGo" = "Let's go";
 "filter" = "Filter";
 "add" = "Add";
+"all" = "All";
 
 // MARK: Routes
 
@@ -78,3 +79,5 @@
 "expense.type.need.name" = "Need";
 "expense.type.need.name.plural" = "Needs";
 
+"expense.filter.favorite" = "Only Favorites";
+"expense.filter.frequency" = "Frequency";

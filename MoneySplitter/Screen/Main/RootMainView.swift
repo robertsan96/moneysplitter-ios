@@ -26,7 +26,7 @@ struct RootMainView: View {
                         .tabItem { Label(tab.localizedTitle, systemImage: getSystemImage(for: tab)) }
                 case .expense: RootExpenseScreenView()
                         .tabItem { Label(tab.localizedTitle, systemImage: getSystemImage(for: tab)) }
-                        .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: false), parent: navigationCoordinator))
+                        .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: true), parent: navigationCoordinator))
                 }
             }
         }
@@ -45,6 +45,6 @@ struct RootMainView: View {
 struct RootMainView_Previews: PreviewProvider {
     static var previews: some View {
         RootMainView()
-            .environmentObject(MainNavigationCoordinator(activeRoute: .home))
+            .environmentObject(MainNavigationCoordinator(activeRoute: .expense))
     }
 }

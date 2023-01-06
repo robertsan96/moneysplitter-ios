@@ -22,7 +22,7 @@ class ExpenseNavigationCoordinator: BaseNavigationCoordinator<ExpenseRoute> {
     }
     
     func didPressFilter() {
-        isFiltering = true
+        activeRoute = .list(isFiltering: true)
     }
 }
 

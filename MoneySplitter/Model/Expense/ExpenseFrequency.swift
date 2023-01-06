@@ -7,14 +7,13 @@
 
 import Foundation
 
-enum ExpenseFrequency {
+enum ExpenseFrequency: CaseIterable {
     case daily
     case weekly
     case halfMonthly
     case monthly
     case halfYearly
     case yearly
-    case custom
     
     var localizedName: String {
         switch self {
@@ -24,7 +23,6 @@ enum ExpenseFrequency {
         case .monthly: return R.string.localizable.frequencyMonthlyName()
         case .halfYearly: return R.string.localizable.frequencyHalfYearlyName()
         case .yearly: return R.string.localizable.frequencyYearlyName()
-        case .custom: return R.string.localizable.frequencyCustomName()
         }
     }
     
@@ -36,7 +34,6 @@ enum ExpenseFrequency {
         case .monthly: return R.string.localizable.frequencyMonthlyNameShort()
         case .halfYearly: return R.string.localizable.frequencyHalfYearlyNameShort()
         case .yearly: return R.string.localizable.frequencyYearlyNameShort()
-        case .custom: return R.string.localizable.frequencyCustomNameShort()
         }
     }
 }

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Expense: Identifiable {
+struct Expense: Identifiable, Equatable {
+    
     let id: UUID
     let category: ExpenseCategory
     let type: ExpenseType
@@ -24,5 +25,9 @@ struct Expense: Identifiable {
         numberFormatter.currencySymbol = currency.symbol
         
         return numberFormatter.string(from: value as NSNumber) ?? ""
+    }
+    
+    static func == (lhs: Expense, rhs: Expense) -> Bool {
+        lhs.id == rhs.id
     }
 }

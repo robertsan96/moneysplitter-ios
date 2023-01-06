@@ -60,7 +60,7 @@ extension Constants.Previews {
                     Tags.favorites
                   ],
                   service: Service.appleICloudSubscription,
-                  isFavorite: false),
+                  isFavorite: true),
             .init(id: UUID(),
                   category: ExpenseCategory.entertainment,
                   type: .want,

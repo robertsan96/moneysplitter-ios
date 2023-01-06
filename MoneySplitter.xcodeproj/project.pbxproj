@@ -58,6 +58,9 @@
 		536045E829663579001988B5 /* ColorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045E729663579001988B5 /* ColorContext.swift */; };
 		536045EF29671FEA001988B5 /* ExpenseDetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */; };
 		536045F229672045001988B5 /* ExpenseListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */; };
+		536F3BDF29687EA900FB6799 /* ExpenseFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F3BDE29687EA900FB6799 /* ExpenseFilterView.swift */; };
+		536F3BE429687F4300FB6799 /* ExpenseFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F3BE329687F4300FB6799 /* ExpenseFilterViewModel.swift */; };
+		536F3BEC29688A5200FB6799 /* ExpenseFilterContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F3BEB29688A5200FB6799 /* ExpenseFilterContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		536045E729663579001988B5 /* ColorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContext.swift; sourceTree = "<group>"; };
 		536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailScreenView.swift; sourceTree = "<group>"; };
 		536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListScreenViewModel.swift; sourceTree = "<group>"; };
+		536F3BDE29687EA900FB6799 /* ExpenseFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFilterView.swift; sourceTree = "<group>"; };
+		536F3BE329687F4300FB6799 /* ExpenseFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFilterViewModel.swift; sourceTree = "<group>"; };
+		536F3BEB29688A5200FB6799 /* ExpenseFilterContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseFilterContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,19 +190,19 @@
 		532454F729601BB3003FAB0F /* MoneySplitter */ = {
 			isa = PBXGroup;
 			children = (
+				532455A829659ACC003FAB0F /* Internal */,
+				532455BD2965A072003FAB0F /* Constants */,
+				5324555D2963FB86003FAB0F /* Extensions */,
+				5324554229603C93003FAB0F /* Components */,
+				53245528296028B1003FAB0F /* Screen */,
+				532455A429659A2E003FAB0F /* Model */,
 				5324550329601BB4003FAB0F /* MoneySplitter.entitlements */,
 				532454F829601BB3003FAB0F /* MoneySplitterApp.swift */,
 				532454FA29601BB3003FAB0F /* Persistence.swift */,
 				5324550129601BB4003FAB0F /* Assets.xcassets */,
-				532455BD2965A072003FAB0F /* Constants */,
-				5324554229603C93003FAB0F /* Components */,
-				5324555D2963FB86003FAB0F /* Extensions */,
-				532455A829659ACC003FAB0F /* Internal */,
 				5324553A29602CB1003FAB0F /* Localizable.strings */,
-				532455A429659A2E003FAB0F /* Model */,
 				532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */,
 				5324550429601BB4003FAB0F /* Preview Content */,
-				53245528296028B1003FAB0F /* Screen */,
 			);
 			path = MoneySplitter;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 		536045C52965F9A7001988B5 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				536F3BE029687EEC00FB6799 /* Filter */,
 				536045C72965F9B6001988B5 /* ExpenseListScreenView.swift */,
 				536045F129672045001988B5 /* ExpenseListScreenViewModel.swift */,
 			);
@@ -427,6 +434,16 @@
 				536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		536F3BE029687EEC00FB6799 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				536F3BDE29687EA900FB6799 /* ExpenseFilterView.swift */,
+				536F3BE329687F4300FB6799 /* ExpenseFilterViewModel.swift */,
+				536F3BEB29688A5200FB6799 /* ExpenseFilterContext.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +588,7 @@
 				532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */,
 				5324557B296403B6003FAB0F /* MainNavigationCoordinator.swift in Sources */,
 				5324554E2960443C003FAB0F /* OnboardingExpensePageView.swift in Sources */,
+				536F3BDF29687EA900FB6799 /* ExpenseFilterView.swift in Sources */,
 				532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */,
 				5324558429640B1F003FAB0F /* GeneralSplitterScreenView.swift in Sources */,
 				53245551296045F6003FAB0F /* OnboardingIncomePageView.swift in Sources */,
@@ -602,9 +620,11 @@
 				536045E529663326001988B5 /* ExpenseCardViewModel.swift in Sources */,
 				532454FB29601BB3003FAB0F /* Persistence.swift in Sources */,
 				532455B029659CF2003FAB0F /* ExpenseType.swift in Sources */,
+				536F3BEC29688A5200FB6799 /* ExpenseFilterContext.swift in Sources */,
 				536045E829663579001988B5 /* ColorContext.swift in Sources */,
 				532455A729659A37003FAB0F /* Expense.swift in Sources */,
 				53245592296557ED003FAB0F /* OnboardingNavigationCoordinator.swift in Sources */,
+				536F3BE429687F4300FB6799 /* ExpenseFilterViewModel.swift in Sources */,
 				532455B629659EB5003FAB0F /* Tag.swift in Sources */,
 				5324552A296028E0003FAB0F /* OnboardingRootView.swift in Sources */,
 				532455AD29659CC3003FAB0F /* ExpenseCategory.swift in Sources */,
@@ -798,7 +818,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -836,7 +856,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
