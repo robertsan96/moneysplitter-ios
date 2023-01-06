@@ -27,14 +27,18 @@ class ExpenseListScreenViewModel: ObservableObject {
         .store(in: &cancellables)
     }
     
-    func filterNeeds(filterContext: ExpenseFilterContext = ExpenseFilterContext()) {
-        // 1. Build matching expenses based on criteria
-        let matchingCriteria = expenses
-            .filter { $0.type == .need }
+    func matchingCriteria(_ filterContext: ExpenseFilterContext = ExpenseFilterContext()) -> [Expense] {
+        expenses
             .filter { filterContext.onlyFavorites == true ? $0.isFavorite : true }
             .filter {
                 filterContext.selectedExpenseFrequency != nil ? $0.frequency == filterContext.selectedExpenseFrequency : true
             }
+    }
+    
+    func filterNeeds(filterContext: ExpenseFilterContext = ExpenseFilterContext()) {
+        // 1. Build matching expenses based on criteria
+        let matchingCriteria = matchingCriteria(filterContext)
+            .filter { $0.type == .need }
         
         // 2. Remove anything not matching criteria
         filteredNeeds.removeAll { expense in
@@ -54,12 +58,8 @@ class ExpenseListScreenViewModel: ObservableObject {
     
     func filterWants(filterContext: ExpenseFilterContext = ExpenseFilterContext()) {
         // 1. Build matching expenses based on criteria
-        let matchingCriteria = expenses
+        let matchingCriteria = matchingCriteria(filterContext)
             .filter { $0.type == .want }
-            .filter {
-                filterContext.onlyFavorites == true ? $0.isFavorite : true
-                // more filters
-            }
         
         // 2. Remove anything not matching criteria
         filteredWants.removeAll { expense in
