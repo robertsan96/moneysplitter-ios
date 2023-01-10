@@ -26,7 +26,8 @@
 "filter" = "Filter";
 "add" = "Add";
 "all" = "All";
-
+"nothingHere" = "Oh, no! There's nothing.";
+ 
 // MARK: Routes
 
 "route.root.onboarding.title" = "Onboarding";
@@ -81,3 +82,5 @@
 
 "expense.filter.favorite" = "Only Favorites";
 "expense.filter.frequency" = "Frequency";
+
+"expense.action.add" = "Add Expense";

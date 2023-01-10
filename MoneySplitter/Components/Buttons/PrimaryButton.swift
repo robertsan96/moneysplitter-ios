@@ -21,7 +21,7 @@ struct PrimaryButton: ButtonStyle {
     }
 }
 
-fileprivate struct BlackButtonView: View {
+fileprivate struct PrimaryButtonView: View {
     var body: some View {
         Button {
             // No action
@@ -35,8 +35,8 @@ fileprivate struct BlackButtonView: View {
     }
 }
 
-struct BlackButtonView_Previews: PreviewProvider {
+struct PrimaryButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        BlackButtonView()
+        PrimaryButtonView()
     }
 }

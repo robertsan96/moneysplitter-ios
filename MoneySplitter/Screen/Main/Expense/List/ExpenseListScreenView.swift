@@ -15,12 +15,19 @@ struct ExpenseListScreenView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    sectionNeeds
+            Group {
+                if viewModel.filteredNeeds.isEmpty && viewModel.filteredWants.isEmpty {
+                    noExpensesView
                         .padding(.horizontal)
-                    sectionWants
-                        .padding(.horizontal)
+                } else {
+                    ScrollView {
+                        LazyVStack {
+                            sectionNeeds
+                                .padding(.horizontal)
+                            sectionWants
+                                .padding(.horizontal)
+                        }
+                    }
                 }
             }
             .background(Color.primaryBackgroundColor)
@@ -65,38 +72,72 @@ struct ExpenseListScreenView: View {
         }
     }
     
-    private var sectionNeeds: some View {
-        Section {
-            ForEach(viewModel.filteredNeeds) { expense in
-                NavigationLink {
-                    ExpenseDetailScreenView()
-                } label: {
-                    ExpenseCardView(colorContext: .secondary,
-                                    viewModel: ExpenseCardViewModel(expense: expense))
-                    .padding(.vertical, 5)
-                    .transition(AnyTransition.scale)
+    private var noExpensesView: some View {
+        VStack {
+            Spacer()
+            Image(uiImage: R.image.notFound()!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150)
+            Text(R.string.localizable.nothingHere)
+                .fontWeight(.bold)
+                .padding()
+            
+            Button {
+                
+            } label: {
+                HStack {
+                    Image(systemName: "plus")
+                    Text(R.string.localizable.expenseActionAdd)
                 }
             }
-        } header: {
-            sectionHeader(R.string.localizable.expenseTypeNeedNamePlural())
+            .buttonStyle(PrimaryButton(color: .accentColor))
+            .padding()
+
+            Spacer()
+        }
+    }
+    
+    private var sectionNeeds: some View {
+        Group {
+            if viewModel.filteredNeeds.count > 0 {
+                Section {
+                    ForEach(viewModel.filteredNeeds) { expense in
+                        NavigationLink {
+                            ExpenseDetailScreenView()
+                        } label: {
+                            ExpenseCardView(colorContext: .secondary,
+                                            viewModel: ExpenseCardViewModel(expense: expense))
+                            .padding(.vertical, 5)
+                            .transition(AnyTransition.scale)
+                        }
+                    }
+                } header: {
+                    sectionHeader(R.string.localizable.expenseTypeNeedNamePlural())
+                }
+            }
         }
     }
     
     private var sectionWants: some View {
-        Section {
-            ForEach(viewModel.filteredWants) { expense in
-                NavigationLink {
-                    ExpenseDetailScreenView()
-                } label: {
-                    ExpenseCardView(colorContext: .secondary,
-                                    viewModel: ExpenseCardViewModel(expense: expense))
-                    .padding(.vertical, 5)
-                    .transition(AnyTransition.scale)
+        Group {
+            if viewModel.filteredWants.count > 0 {
+                Section {
+                    ForEach(viewModel.filteredWants) { expense in
+                        NavigationLink {
+                            ExpenseDetailScreenView()
+                        } label: {
+                            ExpenseCardView(colorContext: .secondary,
+                                            viewModel: ExpenseCardViewModel(expense: expense))
+                            .padding(.vertical, 5)
+                            .transition(AnyTransition.scale)
+                        }
+                    }
+                } header: {
+                    sectionHeader(R.string.localizable.expenseTypeWantNamePlural())
+                        .padding(.top)
                 }
             }
-        } header: {
-            sectionHeader(R.string.localizable.expenseTypeWantNamePlural())
-                .padding(.top)
         }
     }
     
