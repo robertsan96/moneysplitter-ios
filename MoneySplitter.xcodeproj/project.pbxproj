@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469FC5AA2978754400D44989 /* CurrencyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FC5A92978754400D44989 /* CurrencyInputView.swift */; };
+		46EE44AD29772886000E6873 /* ExpenseDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE44AC29772886000E6873 /* ExpenseDetailScreenViewModel.swift */; };
 		532454F929601BB3003FAB0F /* MoneySplitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532454F829601BB3003FAB0F /* MoneySplitterApp.swift */; };
 		532454FB29601BB3003FAB0F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532454FA29601BB3003FAB0F /* Persistence.swift */; };
 		532454FE29601BB3003FAB0F /* MoneySplitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 532454FC29601BB3003FAB0F /* MoneySplitter.xcdatamodeld */; };
@@ -81,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		469FC5A92978754400D44989 /* CurrencyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInputView.swift; sourceTree = "<group>"; };
+		46EE44AC29772886000E6873 /* ExpenseDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailScreenViewModel.swift; sourceTree = "<group>"; };
 		532454F529601BB3003FAB0F /* MoneySplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532454F829601BB3003FAB0F /* MoneySplitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySplitterApp.swift; sourceTree = "<group>"; };
 		532454FA29601BB3003FAB0F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -167,6 +171,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		469FC5AB2978754800D44989 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				469FC5A92978754400D44989 /* CurrencyInputView.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
 		532454EC29601BB3003FAB0F = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				5324559F2965624D003FAB0F /* Root */,
+				5324552B2960290F003FAB0F /* Onboarding */,
 				532455A129656296003FAB0F /* Main */,
 			);
 			path = Screen;
@@ -253,6 +266,7 @@
 		5324554229603C93003FAB0F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				469FC5AB2978754800D44989 /* Currency */,
 				536045DF29660263001988B5 /* Expense */,
 				536045C02965A58E001988B5 /* Navigation */,
 				5324554329603C99003FAB0F /* Buttons */,
@@ -341,7 +355,6 @@
 			children = (
 				53245575296402C1003FAB0F /* RootMainView.swift */,
 				5324557A296403B6003FAB0F /* MainNavigationCoordinator.swift */,
-				5324552B2960290F003FAB0F /* Onboarding */,
 				5324558729655249003FAB0F /* Expense */,
 				5324557129640222003FAB0F /* General */,
 			);
@@ -432,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				536045EE29671FEA001988B5 /* ExpenseDetailScreenView.swift */,
+				46EE44AC29772886000E6873 /* ExpenseDetailScreenViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -606,6 +620,7 @@
 				536045EF29671FEA001988B5 /* ExpenseDetailScreenView.swift in Sources */,
 				532455AB29659AF2003FAB0F /* Currency.swift in Sources */,
 				536045D22965FD14001988B5 /* Previews+Tag.swift in Sources */,
+				469FC5AA2978754400D44989 /* CurrencyInputView.swift in Sources */,
 				536045D82965FDF3001988B5 /* Provider.swift in Sources */,
 				532455C42965A09E003FAB0F /* Constants+Previews.swift in Sources */,
 				5324557329640235003FAB0F /* GeneralHomeScreenView.swift in Sources */,
@@ -631,6 +646,7 @@
 				536045E22966330F001988B5 /* ExpenseCardView.swift in Sources */,
 				536045C42965A5A6001988B5 /* NavigationLogoView.swift in Sources */,
 				536045F229672045001988B5 /* ExpenseListScreenViewModel.swift in Sources */,
+				46EE44AD29772886000E6873 /* ExpenseDetailScreenViewModel.swift in Sources */,
 				53245548296040E6003FAB0F /* OnboardingInitialPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

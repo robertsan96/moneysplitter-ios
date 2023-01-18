@@ -19,11 +19,12 @@ struct ExpenseFilterView: View {
                 .cornerRadius(Constants.CornerRadius.box)
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                HStack {
-                    text(R.string.localizable.expenseFilterFavorite())
-                    Spacer()
-                    Toggle(isOn: $viewModel.filterFavorite) { }
-                }
+                // TODO: Implement Filter for Favorites
+//                HStack {
+//                    text(R.string.localizable.expenseFilterFavorite())
+//                    Spacer()
+//                    Toggle(isOn: $viewModel.filterFavorite) { }
+//                }
                 
                 HStack {
                     text(R.string.localizable.expenseFilterFrequency())

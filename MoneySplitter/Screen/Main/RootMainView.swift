@@ -24,9 +24,10 @@ struct RootMainView: View {
                 case .income:
                     GeneralIncomeScreenView()
                         .tabItem { Label(tab.localizedTitle, systemImage: getSystemImage(for: tab)) }
-                case .expense: RootExpenseScreenView()
+                case .expense:
+                    RootExpenseScreenView()
                         .tabItem { Label(tab.localizedTitle, systemImage: getSystemImage(for: tab)) }
-                        .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: true), parent: navigationCoordinator))
+                        .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: false), parent: navigationCoordinator))
                 }
             }
         }

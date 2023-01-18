@@ -7,10 +7,12 @@
 
 import Foundation
 
-enum Currency {
+enum Currency: Identifiable {
     
     case usd
     case ron
+    
+    var id: Int { isoCode }
     
     var name: String {
         switch self {

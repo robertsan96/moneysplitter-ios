@@ -7,13 +7,15 @@
 
 import Foundation
 
-enum ExpenseFrequency: CaseIterable {
+enum ExpenseFrequency: CaseIterable, Identifiable {
     case daily
     case weekly
     case halfMonthly
     case monthly
     case halfYearly
     case yearly
+    
+    var id: String { localizedShortName }
     
     var localizedName: String {
         switch self {

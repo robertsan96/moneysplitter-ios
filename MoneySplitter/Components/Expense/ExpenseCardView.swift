@@ -15,12 +15,14 @@ struct ExpenseCardView: View {
     var body: some View {
         VStack {
             HStack {
-                logoView
+                // TODO: Implement Service Image
+//                logoView
                 Text(viewModel.expense.service.name)
                     .foregroundColor(.color(for: .text, in: colorContext))
                 Spacer()
-                Image(systemName: viewModel.expense.isFavorite ? "star.fill" : "star")
-                    .foregroundColor(viewModel.expense.isFavorite ? .yellow : .color(for: .text, in: colorContext).opacity(0.4))
+                // TODO: Implement favorites
+//                Image(systemName: viewModel.expense.isFavorite ? "star.fill" : "star")
+//                    .foregroundColor(viewModel.expense.isFavorite ? .yellow : .color(for: .text, in: colorContext).opacity(0.4))
                 Image(systemName: "chevron.right")
                     .foregroundColor(.color(for: .text, in: colorContext))
                     .opacity(0.4)

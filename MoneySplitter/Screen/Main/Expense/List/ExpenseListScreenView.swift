@@ -104,7 +104,7 @@ struct ExpenseListScreenView: View {
                 Section {
                     ForEach(viewModel.filteredNeeds) { expense in
                         NavigationLink {
-                            ExpenseDetailScreenView()
+                            ExpenseDetailScreenView(viewModel: ExpenseDetailUpdateScreenViewModel(expense: expense))
                         } label: {
                             ExpenseCardView(colorContext: .secondary,
                                             viewModel: ExpenseCardViewModel(expense: expense))
@@ -125,7 +125,7 @@ struct ExpenseListScreenView: View {
                 Section {
                     ForEach(viewModel.filteredWants) { expense in
                         NavigationLink {
-                            ExpenseDetailScreenView()
+                            ExpenseDetailScreenView(viewModel: ExpenseDetailUpdateScreenViewModel(expense: expense))
                         } label: {
                             ExpenseCardView(colorContext: .secondary,
                                             viewModel: ExpenseCardViewModel(expense: expense))
@@ -156,7 +156,7 @@ struct ExpenseListScreenView: View {
 struct ExpenseListScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ExpenseListScreenView(viewModel: .mock)
-            .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: true)))
+            .environmentObject(ExpenseNavigationCoordinator(activeRoute: .list(isFiltering: false)))
         
         RootMainView()
             .environmentObject(MainNavigationCoordinator(activeRoute: .expense))
